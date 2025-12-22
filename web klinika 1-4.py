@@ -133,7 +133,7 @@ if 'questions' not in st.session_state:
         ["Děti s _______ mají potíže s rozpoznáváním výrazů obličeje:", ["depresí", "autismem.", "ADHD", "úzkostí"], 1], # [cite: 1746]
         ["Sdílená sociální pozornost je schopnost:", ["mluvit se dvěma", "koordinovat pozornost na osobu a objekt.", "dvě témata", "sledovat cizí rozhovor"], 1], # [cite: 1751]
         ["Většina dětí s autismem:", ["nemá vazbu k rodičům", "náhodné vazby", "vztah jen s rodiči", "preferuje pečovatele před cizími."], 3], # [cite: 1756]
-        ["O emocích u dětí s PAS nevíme, zda je odlišně:", ["prožívají", "zpracovávají", "vyjadřují", "vše uvedené."], 3], # [cite: 1761]
+        ["O emocích u dětí s PAS nevíme, zda je odlišně:", ["prožívají", "zpracovávají", "vyjadřují", "vše uvedené."], 0], # [cite: 1761]
         ["Protodeklarativní gesta vyžadují:", ["řeč", "teorii mysli + řeč", "teorii mysli + sdílenou pozornost.", "inteligenci"], 2], # [cite: 1766]
         ["U kolika dětí s PAS se nevyvíjí funkční jazyk?", ["všech", "většiny", "přibližně poloviny.", "malého počtu"], 2], # [cite: 1771]
         ["Děti s PAS nejčastěji používají:", ["instrumentální gesta.", "expresivní", "protodeklarativní", "sdílené"], 0], # [cite: 1776]
@@ -141,7 +141,7 @@ if 'questions' not in st.session_state:
         ["Primární jazykový deficit u PAS se týká:", ["gramatiky", "sémantiky", "morfologie", "pragmatiky."], 3], # [cite: 1786]
         ["Inteligenční testy (WISC) mohou PAS děti:", ["podhodnocovat.", "nadhodnocovat", "dávat stereotyp", "odrážet přesně"], 0], # [cite: 1791]
         ["Autostimulace může být způsobena:", ["touhou po stimulaci", "příliš podnětným prostředím", "posílením", "vším uvedeným."], 3], # [cite: 1796]
-        ["Schopnosti přesahující běžný intelekt se nazývají:", ["savantské.", "ostrůvkovité", "makroschopnosti", "nadpřirozené"], 0], # [cite: 1801]
+        ["Schopnosti přesahující běžný intelekt se nazývají:", ["savantské.", "ostrůvkovité", "makroschopnosti", "nadpřirozené"], 1], # [cite: 1801]
         ["Zaměření jen na jeden rys objektu je stimulová:", ["dominance", "specializace", "screening", "nadselektivita."], 3], # [cite: 1806]
         ["Upřednostňování vjemů před jinými je senzorická:", ["dominance.", "specializace", "screening", "nadselektivita"], 0], # [cite: 1811]
         ["Teorie mysli předpokládá, že děti s PAS:", ["ignorují rysy", "nerozumí duševním stavům druhých.", "detailismus", "nedělí pozornost"], 1], # [cite: 1816]
@@ -163,14 +163,14 @@ if 'questions' not in st.session_state:
         ["AAP doporučuje screening PAS ve věku:", ["12 m", "15 m", "12 a 24 m", "18 a 24 měsíců."], 3], # [cite: 1896]
         ["S PAS je nejčastěji spojena:", ["tuberózní skleróza.", "Down", "PKU", "fragilní X"], 0], # [cite: 1901]
         ["Příbuzní dětí s PAS mají vyšší výskyt:", ["echolálií", "MR", "pragmatických jazykových obtíží.", "všeho uvedeného"], 2], # [cite: 1906]
-        ["Kolik % rodičů věří, že PAS způsobilo očkování?", ["10 %", "25 %.", "50 %", "75 %"], 1], # [cite: 1911]
+        ["Kolik % rodičů věří, že PAS způsobilo očkování?", ["10 %", "25 %.", "50 %", "75 %"], 2], # [cite: 1911]
         ["Nejčastější neurotransmiter v PAS je:", ["serotonin.", "dopamin", "noradrenalin", "GABA"], 0], # [cite: 1916]
         ["Dr. Lovaas vyvinul:", ["TEACCH", "Floor Time", "ABA.", "PRT"], 2], # [cite: 1921]
         ["Metoda vyžadování specifických odpovědí je trénink:", ["jemných pokusů", "odpovědí", "podnět-reakce", "diskrétních pokusů."], 3], # [cite: 1926]
-        ["Posilování chování přes přirozené příležitosti je trénink:", ["naturalistický", "diskrétní", "náhodný", "klíčových reakcí."], 3], # [cite: 1931]
+        ["Posilování chování přes přirozené příležitosti je trénink:", ["naturalistický", "diskrétní", "náhodný", "klíčových reakcí."], 2], # [cite: 1931]
         ["Včasná intervence u PAS těží z:", ["rodičů", "absence chování", "ochoty se zavděčit", "plasticity."], 3], # [cite: 1936]
         ["UCLA Young Autism Project používá:", ["napodobování", "odměňování a tvarování.", "mimodomovní prostředí", "šoky"], 1], # [cite: 1941]
-        ["Děti s Aspergerem na rozdíl od PAS:", ["nemají sociální postižení", "nemají omezené zájmy", "mají zájem o interakci", "menší zpoždění v řeči."], 3], # [cite: 1946]
+        ["Děti s Aspergerem na rozdíl od PAS:", ["nemají sociální postižení", "nemají omezené zájmy", "mají zájem o interakci", "menší zpoždění v řeči."], 2], # [cite: 1946]
         ["Co NENÍ pravda o Rettově syndromu?", ["dívky", "normální vývoj do 6-12 m", "růst hlavy", "nemají poruchy řeči."], 3], # [cite: 1951]
         ["25 % dětí s _______ možná nikdy nezačne chodit:", ["PAS", "Aspergerem", "Rettovým syndromem.", "dezintegrační poruchou"], 2], # [cite: 1956]
         ["Lukáš ztratil dovednosti po normálním vývoji:", ["PAS", "Asperger", "dětská dezintegrační porucha.", "Rett"], 2] # [cite: 1961]
@@ -183,7 +183,7 @@ if 'questions' not in st.session_state:
         ["Co je NEJMÉNĚ pravděpodobné u budoucích PPP?", ["tělesný tuk", "puberta", "špatný prospěch.", "psychické problémy"], 2], # [cite: 1987]
         ["Kolik % dívek bylo za rok na dietě?", ["10", "25", "65.", "90"], 2], # [cite: 1992]
         ["Co je NEJMÉNĚ pravděpodobné u podvýživy?", ["cirkadiánní rytmus", "růstový hormon.", "kůže", "letargie"], 1], # [cite: 1997]
-        ["Rovnováha výdeje energie je:", ["set point.", "metabolická rychlost", "cirkadiánní rytmus", "příjem"], 0], # [cite: 2002]
+        ["Rovnováha výdeje energie je:", ["set point.", "metabolická rychlost", "cirkadiánní rytmus", "příjem"], 1], # [cite: 2002]
         ["Při nízkém tuku hypotalamus:", ["méně inzulinu", "tukové buňky", "zpomalí metabolismus.", "růstový hormon"], 2], # [cite: 2007]
         ["Produkce růstového hormonu (50-75 %) probíhá:", ["před narozením", "v hlubokém spánku.", "v adolescenci", "při jídle"], 1], # [cite: 2012]
         ["PPP kojenců je charakterizována:", ["nejedlými látkami", "zvracením", "zpomalením váhy.", "regurgitací"], 2], # [cite: 2017]
@@ -225,7 +225,7 @@ if 'questions' not in st.session_state:
         ["Anorektik nejčastěji:", ["umře hlady", "uzdraví se", "bude obézní", "obnoví váhu a pak relapsuje."], 3], # [cite: 2197]
         ["Nástup bulimie je typicky v:", ["rané adolescenci", "pozdní adolescenci/rané dospělosti.", "dospělosti", "kdykoli po pubertě"], 1], # [cite: 2202]
         ["Kolik pacientů s bulimií dosáhne uzdravení?", ["10-15", "20-25", "30-45", "50-75 %."], 3], # [cite: 2207]
-        ["Co NENÍ prediktorem uzdravení u bulimie?", ["třída", "věk při nástupu", "alkohol v rodině.", "všechny jsou prediktory"], 2], # [cite: 2212]
+        ["Co NENÍ prediktorem uzdravení u bulimie?", ["třída", "věk při nástupu", "alkohol v rodině.", "všechny jsou prediktory"], 1], # [cite: 2212]
         ["Neurotransmiter spojovaný s PPP je:", ["dopamin", "GABA", "serotonin.", "noradrenalin"], 2], # [cite: 2217]
         ["Biochemické podobnosti PPP s:", ["ADHD", "soc. fobií", "schizofrenií", "OCD."], 3], # [cite: 2222]
         ["Co souvisí s rozvojem PPP?", ["látky rodičů", "sex. zneužívání", "konflikty", "vše uvedené."], 3], # [cite: 2227]
@@ -271,5 +271,6 @@ for i, opt in enumerate(options):
 
 st.divider()
 st.write(f"**Tvé skóre: {st.session_state.score} / {st.session_state.total}**")
+
 
 
