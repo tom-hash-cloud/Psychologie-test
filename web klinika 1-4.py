@@ -110,7 +110,7 @@ if 'questions' not in st.session_state:
         ["Ve většině případů:", ["úzkost předchází depresi.", "deprese dříve", "současně", "není vztah"], 0], # [cite: 1640]
         ["Oproti úzkostným mají depresivní děti:", ["více neg. afektivity", "méně neg. afektivity", "více poz. afektivity", "méně pozitivní afektivity."], 3], # [cite: 1645]
         ["U žen jsou úzkosti vůči mužům:", ["dvakrát častěji.", "méně často", "mírně více", "stejně"], 0], # [cite: 1650]
-        ["Dětská psychopatologie odráží kombinaci skutečné/skutečného _______ dítěte a _______, skrze které se na něj dívají ostatní v kultuře dítěte.", ["symptomu, struktury", "poruchy, zaměření", "chování, perspektivy", "chování, behaviorální rámce"], 2], # [cite: 1655]
+        ["Dětská psychopatologie odráží kombinaci skutečné/skutečného _______ dítěte a _______, skrze které se na něj dívají ostatní v kultuře dítěte.", ["symptomu, struktury", "poruchy, zaměření", "chování, perspektivy", "chování, behaviorální rámce"], 3], # [cite: 1655]
         ["Dvoufaktorová teorie vysvětluje úzkost kombinací:", ["vazby a učení", "temperamentu a expozice", "klasického a operantního podmiňování.", "modelování"], 2], # [cite: 1660]
         ["Plaché děti mají menší šanci na úzkost, pokud:", ["je rodiče chrání", "rodiče dají pevné hranice pro stres.", "mají sourozence", "rodiče je ignorují"], 1], # [cite: 1665]
         ["Genetický podíl úzkosti s věkem:", ["klesá", "je větší u kluků", "stoupá a je větší u dívek.", "je stejný"], 2], # [cite: 1670]
@@ -271,4 +271,5 @@ for i, opt in enumerate(options):
 
 st.divider()
 st.write(f"**Tvé skóre: {st.session_state.score} / {st.session_state.total}**")
+
 
