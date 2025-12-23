@@ -181,7 +181,7 @@ if 'questions' not in st.session_state:
         ["3. Na rozdíl od většiny poruch dětství a dospívání jsou příčiny poruch příjmu potravy neúměrně spojeny s _______ vlivy.", ["sociokulturními.", "biologickými", "rodinnými", "psychologickými"], 0], # [cite: 1977]
         ["4. Které z následujících tvrzení o vybíravém jedení v raném dětství je NEPRAVDIVÉ?", ["třetina dětí", "častější u dívek", "souvisí s budoucími PPP", "není součástí vývoje."], 3], # [cite: 1982]
         ["5. Která z následujících charakteristik je nejméně pravděpodobná u dospívajících, u nichž se rozvinou problémy s příjmem potravy?", ["tělesný tuk", "puberta", "špatný prospěch.", "psychické problémy"], 2], # [cite: 1987]
-        ["6. Do poloviny adolescence přibližně _______ dívek uvádí, že byly během předchozího roku na dietě.", ["10", "25", "65.", "90"], 2], # [cite: 1992]
+        ["6. Do poloviny adolescence přibližně _______ dívek uvádí, že byly během předchozího roku na dietě.", ["10 %", "25 %", "65 %", "90 %"], 2], # [cite: 1992]
         ["7. Který z následujících následků je u podvyživeného jedince nejméně pravděpodobný?", ["cirkadiánní rytmus", "růstový hormon.", "kůže", "letargie"], 1], # [cite: 1997]
         ["8. Rovnováha energetického výdeje jedince se označuje jako", ["set point.", "metabolická rychlost", "cirkadiánní rytmus", "příjem"], 1], # [cite: 2002]
         ["9. Pokud hladina tuku klesne pod normální rozmezí těla, hypotalamus", ["méně inzulinu", "tukové buňky", "zpomalí metabolismus.", "růstový hormon"], 2], # [cite: 2007]
@@ -271,6 +271,7 @@ for i, opt in enumerate(options):
 
 st.divider()
 st.write(f"**Tvé skóre: {st.session_state.score} / {st.session_state.total}**")
+
 
 
 
