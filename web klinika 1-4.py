@@ -198,7 +198,7 @@ if 'questions' not in st.session_state:
         ["20. Bylo zjištěno, že matky kojenců, kteří neprospívají, jsou ve srovnání s matkami kojenců bez této poruchy", ["nejisté v citové vazbě.", "mladší", "starší", "méně inteligentní"], 0], # [cite: 2062]
         ["21. Studie zjistily, že neprospívání dítěte může ovlivnit tělesný růst v dětství, ale neovlivňuje budoucí", ["zdraví", "růst", "návyky", "kognitivní fungování."], 3], # [cite: 2067]
         ["22. Obezita je:", ["chronické zdravotní onemocnění", "porucha regulace hmotnosti", "selhální vůle", "duševní porucha se začátkem v dětství"], 0], # [cite: 2072]
-        ["23. Obezita je obvykle definována jako index tělesné hmotnosti nad ___ percentilem.", ["60", "70", "80", "95."], 3], # [cite: 2077]
+        ["23. Obezita je obvykle definována jako index tělesné hmotnosti nad ___ percentilem.", ["60", "70", "80", "95"], 3], # [cite: 2077]
         ["24. V 90. letech bylo přibližně ___ amerických dětí považováno za děti s nadváhou.", ["2%", "7%", "15%", "25%"], 2], # [cite: 2082]
         ["25. Obezita je silně spojena s obezitou v", ["kojenci/škola", "kojenci/adolescence", "dětství a dospělosti.", "všude"], 2], # [cite: 2087]
         ["26. Výzkumníci předpovídají, že budoucí míra obezity u dětí v USA a Evropské unii", ["stejná", "poklesne", "vzroste.", "výrazně klesne"], 2], # [cite: 2092]
@@ -271,6 +271,7 @@ for i, opt in enumerate(options):
 
 st.divider()
 st.write(f"**Tvé skóre: {st.session_state.score} / {st.session_state.total}**")
+
 
 
 
