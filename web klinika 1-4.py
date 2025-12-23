@@ -177,7 +177,7 @@ if 'questions' not in st.session_state:
     ],
         "PPP a ANOREXIE": [
             ["1. Přestože mají podobné obavy z jídla a přibírání na váze, jedinci s bulimií se liší od jedinců s anorexií v tom, že _______, zatímco jedinci s anorexií ne.", ["přejídání/zvracení", "hmotnost v rozmezí 10 % normy.", "projímadla", "tajnůstkaření"], 1], # [cite: 1967]
-        ["2. Poruchy příjmu potravy jsou _______ nejčastějším onemocněním u dospívajících dívek.", ["2", "3", "5", "10"], 1], # [cite: 1972]
+        ["2. Poruchy příjmu potravy jsou _______ nejčastějším onemocněním u dospívajících dívek.", ["druhým", "třetím", "pátým", "desátým"], 1], # [cite: 1972]
         ["3. Na rozdíl od většiny poruch dětství a dospívání jsou příčiny poruch příjmu potravy neúměrně spojeny s _______ vlivy.", ["sociokulturními.", "biologickými", "rodinnými", "psychologickými"], 0], # [cite: 1977]
         ["4. Které z následujících tvrzení o vybíravém jedení v raném dětství je NEPRAVDIVÉ?", ["třetina dětí", "častější u dívek", "souvisí s budoucími PPP", "není součástí vývoje."], 3], # [cite: 1982]
         ["5. Která z následujících charakteristik je nejméně pravděpodobná u dospívajících, u nichž se rozvinou problémy s příjmem potravy?", ["tělesný tuk", "puberta", "špatný prospěch.", "psychické problémy"], 2], # [cite: 1987]
@@ -197,9 +197,9 @@ if 'questions' not in st.session_state:
         ["19. Neprospívání dítěte (failure to thrive) je charakterizováno hmotností pod _______ percentilem a/nebo zpomalením přírůstku hmotnosti od narození alespoň o _______ směrodatné odchylky.", ["5, 1", "5, 2.", "10, 1", "10, 2"], 1], # [cite: 2057]
         ["20. Bylo zjištěno, že matky kojenců, kteří neprospívají, jsou ve srovnání s matkami kojenců bez této poruchy", ["nejisté v citové vazbě.", "mladší", "starší", "méně inteligentní"], 0], # [cite: 2062]
         ["21. Studie zjistily, že neprospívání dítěte může ovlivnit tělesný růst v dětství, ale neovlivňuje budoucí", ["zdraví", "růst", "návyky", "kognitivní fungování."], 3], # [cite: 2067]
-        ["22. Obezita je:", ["onemocnění.", "regulace", "vůle", "duševní porucha"], 0], # [cite: 2072]
+        ["22. Obezita je:", ["chronické zdravotní onemocnění", "porucha regulace hmotnosti", "selhální vůle", "duševní porucha se začátkem v dětství"], 0], # [cite: 2072]
         ["23. Obezita je obvykle definována jako index tělesné hmotnosti nad ___ percentilem.", ["60", "70", "80", "95."], 3], # [cite: 2077]
-        ["24. V 90. letech bylo přibližně ___ amerických dětí považováno za děti s nadváhou.", ["2", "7", "15", "25"], 2], # [cite: 2082]
+        ["24. V 90. letech bylo přibližně ___ amerických dětí považováno za děti s nadváhou.", ["2%", "7%", "15%", "25%"], 2], # [cite: 2082]
         ["25. Obezita je silně spojena s obezitou v", ["kojenci/škola", "kojenci/adolescence", "dětství a dospělosti.", "všude"], 2], # [cite: 2087]
         ["26. Výzkumníci předpovídají, že budoucí míra obezity u dětí v USA a Evropské unii", ["stejná", "poklesne", "vzroste.", "výrazně klesne"], 2], # [cite: 2092]
         ["27. Vztah mezi obezitou v preadolescenci a pozdějším rozvojem poruch příjmu potravy je pravděpodobně způsoben", ["biologie", "posměchu.", "psychiatrie", "ničeho"], 1], # [cite: 2097]
@@ -224,7 +224,7 @@ if 'questions' not in st.session_state:
         ["46. Které z následujících tvrzení o genderových rozdílech u poruch příjmu potravy je NEPRAVDIVÉ?", ["stejné klinické rysy", "menší touha po štíhlosti", "větší zaujetí jídlem.", "atletický vzhled"], 2], # [cite: 2192]
         ["47. Nejčastěji jedinci s anorexií ", ["umře hlady", "uzdraví se", "bude obézní", "obnoví váhu a pak relapsuje."], 3], # [cite: 2197]
         ["48. Nástup bulimie je typicky v:", ["rané adolescenci", "pozdní adolescenci/rané dospělosti.", "dospělosti", "kdykoli po pubertě"], 1], # [cite: 2202]
-        ["49. Studie pacientů s bulimií ukazují, že mezi _______ pacientů dosáhne během několika let úplného uzdravení.", ["10-15", "20-25", "30-45", "50-75 %."], 3], # [cite: 2207]
+        ["49. Studie pacientů s bulimií ukazují, že mezi _______ pacientů dosáhne během několika let úplného uzdravení.", ["10-15%", "20-25%", "30-45%", "50-75%"], 3], # [cite: 2207]
         ["50. Který z následujících faktorů není prediktorem úplného uzdravení u osob s bulimií?", ["třída", "věk při nástupu", "alkohol v rodině.", "všechny jsou prediktory"], 1], # [cite: 2212]
         ["51. Neurotransmiterem, kterému byla věnována největší pozornost jako možnému původci poruch příjmu potravy, je", ["dopamin", "GABA", "serotonin.", "noradrenalin"], 2], # [cite: 2217]
         ["52. Vědci zjistili biochemické podobnosti mezi lidmi s poruchami příjmu potravy a lidmi s/se", ["ADHD", "soc. fobií", "schizofrenií", "OCD."], 3], # [cite: 2222]
@@ -271,6 +271,7 @@ for i, opt in enumerate(options):
 
 st.divider()
 st.write(f"**Tvé skóre: {st.session_state.score} / {st.session_state.total}**")
+
 
 
 
