@@ -177,7 +177,7 @@ if 'questions' not in st.session_state:
     ],
         "PPP a ANOREXIE": [
             ["1. Přestože mají podobné obavy z jídla a přibírání na váze, jedinci s bulimií se liší od jedinců s anorexií v tom, že _______, zatímco jedinci s anorexií ne.", ["přejídání/zvracení", "hmotnost v rozmezí 10 % normy.", "projímadla", "tajnůstkaření"], 1], # [cite: 1967]
-        ["2. Poruchy příjmu potravy jsou _______ nejčastějším onemocněním u dospívajících dívek.", ["2.", "3.", "5.", "10."], 1], # [cite: 1972]
+        ["2. Poruchy příjmu potravy jsou _______ nejčastějším onemocněním u dospívajících dívek.", ["2", "3", "5", "10"], 1], # [cite: 1972]
         ["3. Na rozdíl od většiny poruch dětství a dospívání jsou příčiny poruch příjmu potravy neúměrně spojeny s _______ vlivy.", ["sociokulturními.", "biologickými", "rodinnými", "psychologickými"], 0], # [cite: 1977]
         ["4. Které z následujících tvrzení o vybíravém jedení v raném dětství je NEPRAVDIVÉ?", ["třetina dětí", "častější u dívek", "souvisí s budoucími PPP", "není součástí vývoje."], 3], # [cite: 1982]
         ["5. Která z následujících charakteristik je nejméně pravděpodobná u dospívajících, u nichž se rozvinou problémy s příjmem potravy?", ["tělesný tuk", "puberta", "špatný prospěch.", "psychické problémy"], 2], # [cite: 1987]
@@ -199,7 +199,7 @@ if 'questions' not in st.session_state:
         ["21. Studie zjistily, že neprospívání dítěte může ovlivnit tělesný růst v dětství, ale neovlivňuje budoucí", ["zdraví", "růst", "návyky", "kognitivní fungování."], 3], # [cite: 2067]
         ["22. Obezita je:", ["onemocnění.", "regulace", "vůle", "duševní porucha"], 0], # [cite: 2072]
         ["23. Obezita je obvykle definována jako index tělesné hmotnosti nad ___ percentilem.", ["60", "70", "80", "95."], 3], # [cite: 2077]
-        ["24. V 90. letech bylo přibližně ___ amerických dětí považováno za děti s nadváhou.", ["2", "7", "15.", "25"], 2], # [cite: 2082]
+        ["24. V 90. letech bylo přibližně ___ amerických dětí považováno za děti s nadváhou.", ["2", "7", "15", "25"], 2], # [cite: 2082]
         ["25. Obezita je silně spojena s obezitou v", ["kojenci/škola", "kojenci/adolescence", "dětství a dospělosti.", "všude"], 2], # [cite: 2087]
         ["26. Výzkumníci předpovídají, že budoucí míra obezity u dětí v USA a Evropské unii", ["stejná", "poklesne", "vzroste.", "výrazně klesne"], 2], # [cite: 2092]
         ["27. Vztah mezi obezitou v preadolescenci a pozdějším rozvojem poruch příjmu potravy je pravděpodobně způsoben", ["biologie", "posměchu.", "psychiatrie", "ničeho"], 1], # [cite: 2097]
@@ -271,6 +271,7 @@ for i, opt in enumerate(options):
 
 st.divider()
 st.write(f"**Tvé skóre: {st.session_state.score} / {st.session_state.total}**")
+
 
 
 
