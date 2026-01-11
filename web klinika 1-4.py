@@ -5,176 +5,176 @@ import random
 if 'questions' not in st.session_state:
     st.session_state.questions = {
         "ADHD": [
-            ["Při diagnostice ADHD u dítěte psycholog pravděpodobně hledá:", ["charakteristické vzorce chování.", "metabolity v krvi.", "abnormality v čelním laloku mozku.", "násilné chování ze strany rodičů."], 0], # [cite: 1136]
-        ["Děti s ADHD obecně:", ["mají potěšení z pocitu, že se vymykají kontrole.", "chtějí dosahovat dobrých výsledků, ale kvůli omezené sebekontrole mají potíže.", "se mohou chovat přiměřeně, pokud vynaloží dostatečné úsilí.", "lépe prospívají s jasnými pravidly."], 1], # [cite: 1141]
-        ["Teorie poškození mozku u ADHD (40.-50. léta) byla zavržena, protože:", ["RTG nenašel důkazy.", "v roce 1958 byla identifikována psychologická příčina.", "vysvětluje jen velmi malý počet případů.", "poškození se pojilo s retardací."], 2], # [cite: 1146]
-        ["Které tvrzení o ADHD je NEPRAVDIVÉ?", ["Nebyla zjištěna jediná příčina.", "ADHD je souhrnný pojem pro mírně se lišící vzorce chování.", "Hyperaktivita a nepozornost jsou základní znaky.", "Neexistují příznaky zjistitelné RTG nebo laboratoří."], 2], # [cite: 1151]
-        ["Virginia Douglasová tvrdila, že:", ["hyperaktivita je primární složkou ADHD.", "kromě hyperaktivity jsou hlavními příznaky také nepozornost a nedostatky v kontrole impulzů.", "ADHD je způsobena minimálním poškozením mozku.", "ADHD je spíše psychologického původu."], 1], # [cite: 1156]
-        ["V současnosti jsou za hlavní poruchy u ADHD považovány:", ["nepozornost a obtíže s regulací motorického chování.", "potíže s inhibicí chování a slabá seberegulace.", "nepozornost a špatná morální kontrola.", "hyperaktivita a kognitivní problémy."], 1], # [cite: 1161]
-        ["Radek si nedokáže zapamatovat telefonní číslo bez zapsání. Má deficit v:", ["impulzivitě.", "udržení pozornosti.", "selektivní pozornosti.", "kapacity pozornosti."], 3], # [cite: 1166]
-        ["Markétu při učení rozptýlí televize v jiné místnosti. Jde o deficit:", ["kontroly pozornosti.", "udržení pozornosti.", "selektivní pozornosti.", "kapacity pozornosti."], 2], # [cite: 1171]
-        ["Tomáš má problémy s pozorností, když je unavený nebo ho úkol nezajímá. Má nedostatek v:", ["udržení pozornosti.", "rozptýlenosti.", "selektivní pozornosti.", "kapacity pozornosti."], 0], # [cite: 1177]
-        ["Jiným označením deficitu selektivní pozornosti je:", ["rozptýlenost", "impulzivita", "duální pozornost", "dezorganizace"], 0], # [cite: 1183]
-        ["Hlavní příčinou deficitu pozornosti u ADHD je:", ["selektivní pozornost.", "kapacita pozornosti.", "udržení pozornosti / bdělosti.", "rozptýlenost."], 2], # [cite: 1188]
-        ["Který úkol může být pro dítě s ADHD nejobtížnější?", ["nová videohra", "pozor na učitele, když někdo jiný mluví", "zapamatování čísla", "45 minut práce na jednoduchých úlohách"], 3], # [cite: 1193]
-        ["Kdy vykazuje dítě s ADHD pravděpodobně více pohybu?", ["když má v klidu sedět u stolu", "ve spánku", "při hře na hřišti", "ve všech situacích"], 0], # [cite: 1198]
-        ["Příkladem kognitivní impulzivity je:", ["vyhrknutí odpovědi", "dotýkání se plotny", "překotné myšlení", "přerušení rodiče při volání"], 2], # [cite: 1203]
-        ["Riziko problémů s chováním mají děti vykazující:", ["behaviorální impulzivitu.", "kognitivní impulzivitu.", "selektivní nepozornost.", "sníženou schopnost pozornosti."], 0], # [cite: 1208]
-        ["Riziko v akademickém výkonu mají děti vykazující:", ["behaviorální impulzivitu.", "kognitivní impulzivitu.", "selektivní nepozornost.", "kombinaci behaviorální a kognitivní impulzivity."], 3], # [cite: 1213]
-        ["Dalším kritériem pro diagnózu ADHD je:", ["příznaky před 12. rokem věku", "přítomnost aspoň rok", "výskyt aspoň v jednom prostředí", "významné narušení sociálního nebo školního fungování"], 3], # [cite: 1218]
-        ["Které z následujících NENÍ kritériem pro diagnózu ADHD?", ["příznaky před 12. rokem věku", "přítomnost nejméně 6 měsíců", "výskyt ve více než jednom prostředí", "významné poruchy sociálního nebo školního fungování"], 0], # [cite: 1223]
-        ["Děti s ADHD-PI mají ve srovnání s ADHD-HI vyšší riziko:", ["antisociálního chování.", "odmítání vrstevníky.", "úzkostných poruch a poruch nálady.", "speciálního vzdělávání."], 2], # [cite: 1228]
-        ["Které tvrzení o ADHD-HI NENÍ pravdivé?", ["jsou často starší než děti s ADHD-C", "je to nejvzácnější podtyp", "častěji vykazují poruchy chování", "jsou častěji vyloučovány ze školy"], 0], # [cite: 1233]
-        ["Které tvrzení o ADHD-PI NENÍ pravdivé?", ["jsou popisovány jako zasněné", "mají potíže s rychlostí zpracování", "jsou často popisovány jako agresivní a hrubé", "mohou mít zcela odlišnou poruchu"], 2], # [cite: 1238]
-        ["Které tvrzení NENÍ kritikou kritérií DSM-V pro ADHD?", ["počet příznaků není přizpůsoben věku", "požadavek 6 měsíců může být pro děti příliš dlouhý", "DSM pojímá ADHD kategoriálně", "věk nástupu 7 let může být příliš nízký"], 1], # [cite: 1243]
-        ["Mentální procesy k regulaci chování se nazývají:", ["exekutivní funkce.", "metakognice.", "sebepojetí.", "sledování myšlenek."], 0], # [cite: 1248]
-        ["Které tvrzení nejlépe vystihuje inteligenci dětí s ADHD?", ["50 % má podprůměrnou inteligenci", "50 % má nadprůměrnou inteligenci", "inteligentnější děti vykazují více impulzivity", "většina dětí s ADHD má průměrnou inteligenci."], 3], # [cite: 1253]
-        ["Které dítě spíše vykáže pozitivní iluzorní zkreslení?", ["dítě s ADHD-HI a poruchami chování", "dítě s ADHD-HI a depresí", "dítě s ADHD-PI a úzkostí", "dítě s ADHD-PI a poruchami chování"], 0], # [cite: 1258]
-        ["Který znak NENÍ rysem řeči dítěte s ADHD?", ["tichá, mumlavá řeč", "časté změny tématu", "méně zájmen a spojek", "nejasné návaznosti"], 0], # [cite: 1263]
-        ["Které tvrzení o zdraví dětí s ADHD je NEPRAVDIVÉ?", ["často trpí poruchami spánku", "mohou vykazovat mírné poruchy růstu kvůli lékům", "vyšší výskyt tiků", "náchylnější k úrazům"], 1], # [cite: 1268]
-        ["Matky dětí s ADHD mají vyšší pravděpodobnost výskytu:", ["problémů se zneužíváním látek.", "schizofrenie.", "deprese.", "disociální poruchy osobnosti."], 2], # [cite: 1273]
-        ["Které tvrzení o dětech s ADHD je pravdivé?", ["deficit v sociálním uvažování", "stejná sociální agenda jako vrstevníci", "vysoká sociální podpora od vrstevníků", "jsou trvale odmítány vrstevníky"], 3], # [cite: 1278]
-        ["Děti s ADHD vykazují:", ["sníženou touhu po vztazích", "špatné porozumění sociálním vztahům", "silnou schopnost rozpoznávat emoce", "malou vzájemnost ve vztazích s vrstevníky"], 3], # [cite: 1283]
-        ["Nejčastějšími komorbidními poruchami u ADHD jsou:", ["úzkost a deprese.", "opoziční vzdor a deprese.", "tikové poruchy.", "porucha chování a opoziční vzdor."], 3], # [cite: 1288]
-        ["Které tvrzení o dětech s ADHD a úzkostmi je pravdivé?", ["často adolescenti", "často podtyp ADHD-HI", "často podtyp ADHD-PI", "tvoří 50 % klinicky odesílaných dětí"], 2], # [cite: 1293]
-        ["Vztah mezi ADHD a depresí se zdá být funkcí:", ["demoralizace v důsledku příznaků.", "rodinného rizika.", "rodinného stresu.", "všech uvedených faktorů"], 1], # [cite: 1298]
-        ["Nejlepší odhad prevalence ADHD u školních dětí je:", ["1-2 %", "3-5 %", "9-10 %", "15-20 %"], 1], # [cite: 1303]
-        ["Vyšší výskyt ADHD u chlapců je nejspíše způsoben:", ["výběrovým zkreslením.", "společenským očekáváním.", "vyšší mírou agrese.", "všemi uvedenými faktory"], 3], # [cite: 1308]
-        ["Ve srovnání s chlapci vykazují dívky s ADHD častěji:", ["vyšší úroveň hyperaktivity.", "větší postižení exekutivních funkcí.", "vyšší úroveň agrese.", "příznaky nepozornosti / dezorganizace."], 3], # [cite: 1313]
-        ["Dívky s ADHD mají proti dívkám bez ADHD vyšší pravděpodobnost:", ["poruch chování, nálady a úzkostí.", "nižší míry verbální agrese.", "vyšší IQ.", "neplatí nic z uvedeného"], 0], # [cite: 1318]
-        ["Vyšší výskyt ADHD v nízkých soc-ek. skupinách vysvětluje:", ["přítomnost deprese.", "psychopatologie u rodičů.", "souběžné poruchy chování.", "souběžné poruchy učení."], 2], # [cite: 1323]
-        ["Které tvrzení o ADHD a kultuře NENÍ pravdivé?", ["častější ve vyšších soc-ek. skupinách", "zaznamenáno ve všech zemích", "odráží kulturní normy", "souvisí s rozdíly v definici"], 0], # [cite: 1328]
-        ["Matky dětí s ADHD popisují své děti v kojeneckém věku jako:", ["obtížné", "snadné", "nerozeznatelné", "úzkostné"], 0], # [cite: 1333]
-        ["Pokud jde o nástup příznaků ADHD:", ["příznaky se objevují ve stejnou dobu (předškolní věk)", "příznaky se objevují ve stejnou dobu (začátek školy)", "nepozornost dříve než hyperaktivita", "hyperaktivita-impulzivita obvykle dříve než nepozornost."], 3], # [cite: 1338]
-        ["Které tvrzení o průběhu ADHD je pravdivé?", ["nerozvíjí se před školou", "většina před dospíváním překoná", "mnoho dospělých nebylo v dětství diagnostikováno", "všechna uvedená tvrzení"], 2], # [cite: 1343]
-        ["Dospělí s ADHD mají šanci na lepší životní výsledky, pokud:", ["jsou příznaky méně závažné.", "mají podporu rodiny.", "mají přístup k pomoci.", "platí vše výše uvedené"], 3], # [cite: 1348]
-        ["Která z možností nejpravděpodobněji způsobuje ADHD?", ["příliš mnoho cukru", "zářivkové osvětlení", "špatné školní prostředí", "žádná z uvedených možností není správná"], 3], # [cite: 1353]
-        ["Děti s ADHD vykazují:", ["deficity motivace.", "deficity v úrovni aktivace.", "deficity v seberegulaci.", "všechny výše uvedené projevy"], 3], # [cite: 1358]
-        ["Výzkum ukazuje, že ADHD je porucha s determinantami převážně:", ["biologickými", "neurobiologickými", "socio-environmentálními", "rodinnými"], 1], # [cite: 1363]
-        ["Studie na dvojčatech naznačují, že největší roli hraje:", ["sdílené prostředí", "nesdílené prostředí", "dědičnost", "všechny faktory stejně"], 2], # [cite: 1368]
-        ["Gen dopaminového receptoru DRD4 je spojován s:", ["vyhledáváním vzrušení.", "popudlivým chováním.", "impulzivitou.", "všemi výše uvedenými faktory"], 3], # [cite: 1373]
-        ["Drobné tělesné anomálie a rizika u porodu jsou faktory pro:", ["ADHD (nikoli jiné)", "mnoho forem psychopatologie.", "pouze ADHD a poruchy chování.", "pouze úzkost a depresi."], 1], # [cite: 1378]
-        ["Neurobiologický výzkum příčin ADHD podporuje zapojení:", ["limbického systému.", "hipokampu.", "retikulárního systému.", "frontostriatálních okruhů."], 3], # [cite: 1383]
-        ["Ve studii Hoovera & Miliche (1994) matky věřící, že dítě požilo cukr:", ["byly milejší.", "byly klidnější.", "byly kritičtější a hodnotily je jako více hyperaktivní.", "nezaznamenaly změnu."], 2], # [cite: 1388]
-        ["Výzkum vlivu rodiny na ADHD naznačuje, že:", ["rodinné faktory vysvětlují velkou část.", "vysvětlují pouze malou část.", "mohou zvyšovat závažnost symptomů.", "vysvětlují malou část, ale mohou zvýšit závažnost."], 3], # [cite: 1393]
-        ["Nejlepší léčbou ADHD je:", ["stimulační léky.", "trénink rodičů.", "vzdělávací intervence.", "kombinace všech uvedených přístupů"], 3], # [cite: 1398]
-        ["Stimulační léky fungují tak, že:", ["paradoxně zpomalují.", "mění aktivitu neurotransmiterů ve frontostriatálních oblastech.", "zlepšují náladu.", "působí jako placebo."], 1], # [cite: 1403]
-        ["Vzdělávací intervence u ADHD zahrnuje:", ["token economy ve třídě.", "vizuální pomůcky.", "písemné i ústní instrukce.", "všechny výše uvedené možnosti"], 3], # [cite: 1408]
-        ["Výsledky studie MTA ukázaly, že:", ["behaviorální léčba účinnější.", "přidání beh. léčby k medikaci přineslo větší zlepšení.", "přínos jen u farmakologické léčby.", "žádná z uvedených možností není správná"], 2] # [cite: 1413]
-    ],
+            ["1. Při diagnostice ADHD u dítěte psycholog pravděpodobně hledá", ["charakteristické vzorce chování.", "metabolity v krvi.", "abnormality v čelním laloku mozku.", "násilné chování ze strany rodičů."], 0],
+    ["2. Děti s ADHD obecně", ["mají potěšení z pocitu, že se vymykají kontrole.", "chtějí dosahovat dobrých výsledků, ale kvůli omezené sebekontrole mají potíže.", "se mohou chovat přiměřeně, pokud vynaloží dostatečné úsilí.", "lépe prospívají, když mají jasně stanovená a důsledně dodržovaná pravidla."], 1],
+    ["3. Teorie poškození mozku u ADHD, která vznikla ve 40. a 50. letech 20. století, byla zavržena, protože", ["pomocí rentgenu nebyly nalezeny žádné důkazy o poškození mozku.", "v roce 1958 byla identifikována psychologická příčina ADHD.", "vysvětluje jen velmi malý počet případů ADHD.", "poškození mozku bylo spojováno spíše s mentální retardací než s ADHD."], 2],
+    ["4. Které z následujících tvrzení o ADHD je NEPRAVDIVÉ?", ["Nebyla zjištěna jediná příčina chování dětí s ADHD.", "ADHD je souhrnný pojem, který popisuje několik různých vzorců chování, jež se mírně liší.", "Hyperaktivita a nepozornost jsou základními znaky ADHD.", "Nexistují výrazné příznaky ADHD, které lze zjistit pomocí rentgenového snímku nebo laboratorního testu."], 2],
+    ["5. Virginia Douglasová tvrdila, že", ["hyperaktivita je primární složkou ADHD.", "kromě hyperaktivity jsou hlavními příznaky také nepozornost a nedostatky v kontrole impulzů.", "ADHD je způsobena minimálním poškozením mozku.", "ADHD je spíše psychologického než biologického původu."], 1],
+    ["6. V současnosti jsou za hlavní poruchy u ADHD považovány", ["nepozornost a obtíže s regulací motorického chování.", "potíže s inhibicí chování a slabá seberegulace.", "nepozornost a špatná morální kontrola.", "hyperaktivita a kognitivní problémy."], 1],
+    ["7. Radek si nedokáže zapamatovat telefonní číslo, pokud si jej nezapíše. Vykazuje deficit v oblasti", ["impulzivity.", "udržení pozornosti.", "selektivní pozornosti.", "kapacity pozornosti."], 3],
+    ["8. Když si Markéta sedne k domácím úkolům a učení, snadno ji rozptýlí televize v jiné místnosti. Markéta vykazuje deficit v oblasti", ["kontroly pozornosti.", "udržení pozornosti.", "selektivní pozornosti.", "kapacity pozornosti."], 2],
+    ["9. Tomáš má problémy s udržením pozornosti zejména tehdy, když je unavený nebo ho úkol nezajímá. Tomáš vykazuje nedostatky v oblasti", ["udržení pozornosti.", "rozptýlenosti.", "selektivní pozornosti.", "kapacity pozornosti."], 0],
+    ["10. Který z následujících pojmů je jiným označením deficitu selektivní pozornosti?", ["rozptýlenost", "impulzivita", "duální pozornost", "dezorganizace"], 0],
+    ["11. Mnozí se domnívají, že hlavní příčinou deficitu pozornosti u ADHD je", ["selektivní pozornost.", "kapacita pozornosti.", "udržení pozornosti / bdělosti.", "rozptýlenost."], 2],
+    ["12. Který úkol může být pro dítě s ADHD nejobtížnější?", ["naučit se novou videohru", "věnovat pozor učiteli, zatímco někdo jiný ve třídě mluví", "zapamatovat si telefonní číslo kamaráda", "pracovat 45 minut na stránce s jednoduchými matematickými úlohami"], 3],
+    ["13. Kdy vykazuje dítě s ADHD pravděpodobně více pohybové aktivity než ostatní děti?", ["když je požádáno, aby v klidu sedělo u stolu", "ve spánku", "při hře na hřišti", "ve všech uvedených situacích"], 0],
+    ["14. Který z následujících příkladů představuje kognitivní impulzivitu?", ["vyhrknutí odpovědi ve třídě", "dotýkání se horké plotny", "překotné myšlení", "přerušení rodiče při telefonování"], 2],
+    ["15. Děti s ADHD, u nichž je zvýšené riziko problémů s chováním nebo opozičním vzdorem, jsou ty, které vykazují", ["behaviorální impulzivitu.", "kognitivní impulzivitu.", "selektivní nepozornost.", "sníženou schopnost pozornosti."], 0],
+    ["16. Děti, které jsou více ohroženy problémy v akademickém výkonu, jsou ty, které vykazují", ["behaviorální impulzivitu.", "kognitivní impulzivitu.", "selektivní nepozornost.", "kombinaci behaviorální a kognitivní impulzivity."], 3],
+    ["17. Které z následujících je dalším kritériem pro diagnózu ADHD?", ["příznaky se musí objevit před 12. rokem věku", "příznaky musí být přítomny alespoň jeden rok", "příznaky se musí vyskytovat alespoň v jednom prostředí", "příznaky musí způsobovat významné narušení sociálního nebo školního fungování dítěte"], 3],
+    ["18. Které z následujících NENÍ dalším kritériem pro diagnózu ADHD?", ["příznaky se musí objevit před 12. rokem věku", "příznaky musí být přítomny nejméně 6 měsíců", "příznaky se musí vyskytovat ve více než jednom prostředí", "příznaky musí způsobovat významné poruchy sociálního nebo školního fungování dítěte"], 0],
+    ["19. Ve srovnání s dětmi s ADHD-HI mají děti s podtypem ADHD-PI vyšší riziko", ["antisociálního chování.", "odmítání ze strany vrstevníků.", "úzkostných poruch a poruch nálady.", "zařazení do speciálního vzdělávání."], 2],
+    ["20. Které z následujících tvrzení o ADHD-HI NENÍ pravdivé?", ["děti s ADHD-HI jsou často starší než děti s ADHD-C", "podtyp ADHD-HI je nejvzácnějším podtypem ADHD", "děti s ADHD-HI častěji vykazují poruchy chování než děti s ADHD-PI", "děti s ADHD-HI jsou častěji vyloučovány ze školy než děti s ADHD-PI"], 0],
+    ["21. Které z následujících tvrzení o ADHD-PI NENÍ pravdivé?", ["děti s ADHD-PI jsou často popisovány jako zasněné a ospalé", "děti s ADHD-PI mají potíže s rychlostí zpracování informací", "děti s ADHD-PI jsou často popisovány jako agresivní a hrubé", "výzkumy naznačují, že děti s ADHD-PI mohou mít zcela odlišnou poruchu než děti s ADHD-HI a ADHD-C"], 2],
+    ["22. Které z následujících tvrzení NENÍ kritikou diagnostických kritérií DSM-V pro ADHD?", ["počet požadovaných příznaků není přizpůsoben věku nebo úrovni vyspělosti dítěte", "požadavek přetrvání příznaků po dobu 6 měsíců může být pro malé děti příliš dlouhý", "DSM pojímá ADHD striktně kategoriálně", "požadovaný věk nástupu onemocnění 7 let může být příliš nízký"], 1],
+    ["23. Mentální procesy, které stojí za schopností dětí regulovat vlastní chování, se nazývají", ["exekutivní funkce.", "metakognice.", "sebepojetí.", "sledování myšlenek."], 0],
+    ["24. Které z následujících tvrzení nejlépe vystihuje inteligenci dětí s ADHD?", ["více než 50 % dětí s ADHD má podprůměrnou inteligenci", "více než 50 % dětí s ADHD má nadprůměrnou inteligenci", "inteligentnější děti vykazují více impulzivity a hyperaktivity", "většina dětí s ADHD má průměrnou inteligenci."], 3],
+    ["25. Které dítě bude s větší pravděpodobností vykazovat pozitivní iluzorní zkreslení?", ["dítě s ADHD-HI a poruchami chování", "dítě s ADHD-HI a depresí", "dítě s ADHD-PI a úzkostí", "dítě s ADHD-PI a proruchami chováním"], 0],
+    ["26. Který z následujících znaků NENÍ charakteristickým rysem řeči/jazyka dítěte s ADHD?", ["tichá, mumlavá řeč, kterou je obtížné slyšet", "časté změny tématu rozhovoru", "používání menšího množství zájmen a spojek", "nejasné návaznosti v konverzaci"], 0],
+    ["27. Které z následujících tvrzení o zdravotním stavu dětí s ADHD je NEPRAVDIVÉ?", ["děti s ADHD často trpí poruchami spánku", "děti s ADHD mohou vykazovat mírné poruchy růstu, které jsou pravděpodobně způsobené užíváním léků", "děti s ADHD vykazují vyšší výskyt tikových poruch než ostatní děti", "děti s ADHD jsou náchylnější k úrazům než ostatní děti"], 1],
+    ["28. Matky dětí s ADHD mají vyšší pravděpodobnost výskytu", ["problémů se zneužíváním návykových látek.", "schizofrenie.", "deprese.", "disociální poruchy osobnosti."], 2],
+    ["29. Které z následujících tvrzení o dětech s ADHD je pravdivé?", ["mají deficit v sociálním uvažování", "mají stejnou sociální agendu jako jejich vrstevníci", "uvádějí, že dostávají vysokou míru sociální podpory od vrstevníků", "jsou trvale odmítány vrstevníky"], 3],
+    ["30. Děti s ADHD vykazují", ["sníženou touhu po vztazích s vrstevníky", "špatné porozumění sociálním vztahům", "silnou schopnost správně rozpoznávat emoce u druhých", "malou vzájemnost ve vztazích s vrstevníky"], 3],
+    ["31. Nejčastějšími komorbidními psychickými poruchami u dětí s ADHD jsou", ["úzkost a deprese.", "porucha opozičního vzdoru a deprese.", "tikové poruchy.", "porucha chování a porucha opozičního vzdoru."], 3],
+    ["32. Které tvrzení o dětech s ADHD a úzkostnými poruchami je pravdivé?", ["často se jedná o adolescenty", "často patří k podtypu ADHD-HI", "často patří k podtypu ADHD-PI", "tvoří přibližně 50 % klinicky odesílaných dětí s ADHD"], 2],
+    ["33. Vztah mezi ADHD a depresí se zdá být funkcí", ["provokování a demoralizace, kterou dítě zažívá v důsledku svých příznaků.", "rodinného rizika jedné poruchy, které zvyšuje riziko druhé.", "celkového rodinného stresu.", "všech uvedených faktorů"], 1],
+    ["34. Nejlepší odhad prevalence ADHD u dětí školního věku je", ["1–2 %", "3–5 %", "9–10 %", "15–20 %"], 1],
+    ["35. Vyšší výskyt ADHD u chlapců ve srovnání s dívkami je s největší pravděpodobností způsoben", ["výběrovým a referenčním zkresleními.", "společenským očekáváním a tolerancí.", "vyšší mírou agrese u chlapců.", "všemi uvedenými faktory"], 3],
+    ["36. Ve srovnání s chlapci vykazují dívky s ADHD častěji", ["vyšší úroveň hyperaktivity.", "větší postižení exekutivních funkcí.", "vyšší úroveň agrese.", "příznaky nepozornosti / dezorganizace."], 3],
+    ["37. Dívky s ADHD mají ve srovnání s dívkami bez ADHD vyšší pravděpodobnost", ["poruch chování, nálady a úzkostných poruch.", "nižší míru verbální agrese.", "vyšší IQ a lepší školní výsledky.", "neplatí nic z výše uvedeného"], 0],
+    ["38. Vyšší výskyt ADHD v nízkých socioekonomických skupinách je nejlépe vysvětlen", ["přítomností souběžné deprese.", "přítomností psychopatologie u rodičů.", "přítomností souběžných poruch chování.", "přítomností souběžných poruch učení."], 2],
+    ["39. Které tvrzení o ADHD a kultuře NENÍ pravdivé?", ["ADHD se častěji vyskytuje ve vyšších socioekonomických skupinách než v nižších", "ADHD bylo zaznamenáno ve všech zemích, kde bylo studováno", "rozdíly v prevalenci ADHD mezi kulturami mohou odrážet kulturní normy", "rozdíly v prevalenci ADHD mezi kulturami mohou souviset s rozdíly v definici"], 0],
+    ["40. Matky dětí s ADHD často popisují své děti v kojeneckém věku jako _________.", ["obtížné", "snadné", "nerozeznatelné od sourozenců", "nadměrně úzkostné a depresivní"], 0],
+    ["41. Pokud jde o nástup příznaků ADHD", ["příznaky hyperaktivity-impulzivity a nepozornosti se obvykle objevují přibližně ve stejnou dobu, zpravidla v předškolním věku.", "příznaky hyperaktivity-impulzivity a nepozornosti se objevují přibližně ve stejnou dobu, obvykle na počátku školní docházky.", "příznaky nepozornosti se obvykle objevují dříve než příznaky hyperaktivity-impulzivity.", "příznaky hyperaktivity-impulzivity se obvykle objevují dříve než příznaky nepozornosti."], 3],
+    ["42. Které tvrzení o průběhu ADHD je pravdivé?", ["ADHD se nerozvíjí dříve než ve školním věku", "většina dětí s ADHD své potíže před dospíváním překoná", "mnoho dospělých má ADHD, ale v dětství nebyli nikdy diagnostikováni", "všechna uvedená tvrzení jsou pravdivá"], 2],
+    ["43. Dospělí s ADHD mají větší šanci na lepší životní výsledky, pokud", ["jsou jejich příznaky méně závažné.", "mají podporu rodiny.", "mají přístup ke zdrojům pomoci.", "platí vše výše uvedené"], 3],
+    ["44. Která z následujících možností nejpravděpodobněji způsobuje ADHD?", ["příliš mnoho cukru", "zářivkové osvětlení", "špatné školní prostředí", "žádná z uvedených možností není správná"], 3],
+    ["45. Děti s ADHD vykazují", ["deficity motivace.", "deficity v úrovni aktivace (arousalu).", "deficity v seberegulaci.", "všechny výše uvedené projevy"], 3],
+    ["46. Výzkum příčinných faktorů poskytuje silné důkazy, že ADHD je porucha s převážně _________ determinantami.", ["biologickými", "neurobiologickými", "socio-environmentálními", "rodinnými"], 1],
+    ["47. Studie na dvojčatech naznačují, že největší roli při vzniku ADHD hrají faktory _________.", ["sdíleného prostředí", "nesdíleného prostředí", "dědičnosti", "všechny uvedené faktory hrají podobnou roli"], 2],
+    ["48. Gen dopaminového receptoru DRD4, je spojován s", ["vyhledáváním vzrušení.", "popudlivým chováním.", "impulzivitou.", "všemi výše uvedenými faktory"], 3],
+    ["49. Drobné tělesné anomálie a další rizikové faktory před, během a po narození jsou specifickými rizikovými faktory pro", ["ADHD, ale nikoli pro jiné formy psychopatologie.", "mnoho forem psychopatologie.", "pouze ADHD a poruchy chování.", "pouze úzkost a depresi."], 1],
+    ["50. Neurobiologický výzkum příčin ADHD opakovaně podporuje zapojení", ["limbického systému.", "hipokampu.", "retikulárního aktivačního systému.", "frontostriatálních okruhů."], 3],
+    ["51. Ve studii Hoovera & Miliche (1994) matky, které se (mylně) domnívaly, že jejich děti požily cukr,", ["popisovaly své děti jako „milejší“ než matky v kontrolní skupině.", "hodnotily své děti jako šťastnější a klidnější než matky v kontrolní skupině.", "byly ke svým dětem kritičtější a hodnotily je jako více hyperaktivní než matky v kontrolní skupině.", "nezaznamenaly žádnou změnu v chování svých dětí."], 2],
+    ["52. Výzkum negativního vlivu rodiny na symptomatologii ADHD naznačuje, že", ["rodinné faktory vysvětlují významnou část variability symptomů ADHD.", "rodinné faktory vysvětlují pouze malou část variability symptomů ADHD.", "rodinné faktory mohou zvyšovat závažnost některých symptomů ADHD.", "rodinné faktory vysvětlují pouze malou část variability symptomů ADHD, přesto však mohou zvyšovat závažnost některých symptomů."], 3],
+    ["53. Nejlepší léčbou ADHD je", ["použití stimulačních léků.", "trénink rodičovských dovedností.", "vzdělávací intervence.", "kombinace všech uvedených přístupů"], 3],
+    ["54. Stimulační léky fungují tak, že", ["paradoxně děti zpomalují.", "mění aktivitu neurotransmiterů ve frontostriatálních oblastech mozku (stimulují oblasti s nízkou aktivací).", "zlepšují náladu, což následně zvyšuje sebehodnocení a kontrolu chování.", "„přesvědčují“ rodiče a učitele, že fungují, i když ve skutečnosti nefungují (placebo efekt)."], 1],
+    ["55. Vzdělávací intervence u ADHD může zahrnovat", ["postupy založené na odečítání bodů (token economy) ve třídě.", "používání vizuálních pomůcek.", "poskytování písemných i ústních instrukcí.", "všechny výše uvedené možnosti"], 3],
+    ["56. Výsledky Multimodální studie léčby dětí s ADHD (MTA Study) ukázaly, že", ["behaviorální léčba byla obecně účinnější než farmakologická léčba.", "přidání behaviorální léčby k medikaci přineslo větší zlepšení základních symptomů než samotná medikace.", "tři roky po ukončení léčby přetrvával přínos léčby pouze u skupiny s farmakologickou léčbou.", "žádná z uvedených možností není správná"], 2]
+],
         "ÚZKOSTNÉ PORUCHY": [
-            ["Která z následujících možností NEPLATÍ pro úzkostné poruchy?", ["U dětí jsou vzácné.", "Existuje několik typů.", "Mohou přetrvávat celý život.", "Často se vyskytují s jinými poruchami."], 0], # [cite: 1419]
-        ["_______ mobilizuje tělo k akci v situaci boj/útěk:", ["CNS", "PNS", "Sympatický nervový systém", "Parasympatický nervový systém"], 2], # [cite: 1424]
-        ["Při aktivaci sympatiku dochází k uvolnění:", ["inzulínu", "adrenalinu", "růstového hormonu", "testosteronu"], 1], # [cite: 1429]
-        ["_______ je okamžitá poplachová reakce na aktuální nebezpečí:", ["Úzkost", "Panika", "Strach", "Obavy"], 2], # [cite: 1434]
-        ["_______ se vyznačuje pocity strachu a nedostatku kontroly nad událostmi:", ["Úzkost", "Panika", "Strach", "Obavy"], 0], # [cite: 1439]
-        ["_______ jsou tělesné příznaky boj/útěk bez zjevné hrozby:", ["Úzkost", "Panika", "Strach", "Obavy"], 1], # [cite: 1444]
-        ["Strach _______ se zvyšuje s věkem:", ["ze sociálních situací", "ze školy", "z tmy", "z odloučení"], 0], # [cite: 1449]
-        ["Strach ze smrti je běžný u dětí ve věku:", ["1-2 let.", "3-5 let.", "6-8 let.", "9-12 let."], 3], # [cite: 1454]
-        ["Strach z odloučení od rodičů je běžný u dětí ve věku:", ["1-2 let.", "3-4 let.", "5-6 let.", "všechny věkové skupiny"], 3], # [cite: 1459]
-        ["Děti s úzkostmi mají intenzivnější obavy z/ze:", ["školních úloh.", "bolístek.", "sportovních výsledků.", "cizích lidí."], 3], # [cite: 1464]
-        ["Rituální chování je u malých dětí _______:", ["nepřítomné", "neobvyklé", "běžné", "obtížně pozorovatelné"], 2], # [cite: 1469]
-        ["MKN-10 dělí úzkostné poruchy podle:", ["dimenzí", "druhy reakcí a vyhýbání se", "odpovědi na léčbu", "typického věku nástupu."], 1], # [cite: 1474]
-        ["Kdy absence separační úzkosti naznačuje nejistou vazbu?", ["2 měsíce", "12 měsíců", "10 let", "nikdy"], 1], # [cite: 1479]
-        ["Nejčastější úzkostnou poruchou v dětství je:", ["OCD", "panika", "GAD", "separační úzkostná porucha."], 3], # [cite: 1484]
-        ["Porucha s nejčasnějším věkem nástupu je:", ["OCD", "panika", "GAD", "separační úzkostná porucha."], 3], # [cite: 1489]
-        ["Průměrný věk nástupu separační úzkosti je:", ["2-3 roky", "4-6 let", "7-8 let", "9-10 let"], 2], # [cite: 1494]
-        ["Co NENÍ u separační úzkosti běžné?", ["jiná úzkost", "deprese", "porucha chování", "odmítání školy"], 2], # [cite: 1499]
-        ["Co vede nejméně pravděpodobně k odmítání školy?", ["potíže s učením", "separační úzkost", "strach z posměchu", "strach z hodnocení"], 0], # [cite: 1504]
-        ["Která diagnóza NEPATŘÍ do MKN-10?", ["SAD", "OCD", "panika", "testová úzkost"], 3], # [cite: 1509]
-        ["Které tvrzení o testové úzkosti je NEPRAVDIVÉ?", ["obavy z hodnocení", "může být specifická fobie", "často komorbidní s GAD", "všechny jsou pravdivé"], 3], # [cite: 1514]
-        ["Přehnané obavy při absenci podmínek jsou:", ["tenze", "obavné očekávání.", "strach", "panika"], 1], # [cite: 1519]
-        ["Děti s GAD se od ostatních liší tím, že:", ["obavy jsou mimo věk", "somatické příznaky", "starosti kvůli drobnostem", "starosti o drobnosti + somatika"], 2], # [cite: 1524]
-        ["Pro diagnózu GAD se musí projevovat:", ["SAD", "obavy o výsledky", "aspoň jeden somatický příznak.", "perfekcionismus"], 2], # [cite: 1529]
-        ["Prevalence GAD u dětí je:", ["1-2 %", "2-4 %", "3-6 %", "6-8 %"], 2], # [cite: 1534]
-        ["Děti se specifickou fobií na rozdíl od dospělých:", ["se vyhýbají podnětům", "nerozpoznají, že jsou obavy extrémní.", "pociťují vzrušení", "jsou snadněji léčitelné"], 1], # [cite: 1539]
-        ["Strach ze zvířat u dětí je nejpravděpodobněji způsoben:", ["expozicí", "evolučními procesy.", "ochranou rodičů", "všemi faktory"], 1], # [cite: 1544]
-        ["Situační specifická fobie je strach z:", ["výšek", "výtahů.", "nemocí", "injekcí"], 1], # [cite: 1549]
-        ["______ je nejčastější sekundární diagnózou u úzkostných poruch:", ["Specifická fobie", "Sociální fobie", "OCD", "Generalizovaná úzkostná porucha"], 1], # [cite: 1554]
-        ["Sociální fobie se poprvé objevuje v:", ["školce", "mladším školním věku", "prepubertě", "pubertě a dospívání."], 3], # [cite: 1559]
-        ["Selektivní mutismus je považován za typ:", ["specifické fobie", "GAD", "OCD", "sociální fobie."], 3], # [cite: 1564]
-        ["Děti se selektivním mutismem mohou také mít:", ["zpožděný vývoj", "poruchy řeči", "poruchy sluchu", "vše výše uvedené"], 3], # [cite: 1569]
-        ["U posedlosti čistotou je pravděpodobné nutkání:", ["mytí rukou.", "vyhýbat se prasklinám", "myslet na špínu", "dotýkat se špíny"], 0], # [cite: 1574]
-        ["Nutkání počítat souvisí s obavou z/ze:", ["symetrie nebo řádu.", "poškození", "kontaminace", "náboženství"], 1], # [cite: 1579]
-        ["Jaký je účel kompulzí?", ["spotřebovat čas", "nemyslet na jiné věci", "snížit úzkost.", "žádný"], 2], # [cite: 1584]
-        ["Výskyt OCD u dětí je vůči dospělým:", ["menší", "větší", "je roven.", "variabilní"], 2], # [cite: 1589]
-        ["_______ vlivy hrají roli u časných případů OCD:", ["Rodičovské", "Skupinové", "Neurobiologické", "Genetické"], 3], # [cite: 1594]
-        ["Co NENÍ znakem záchvatu paniky?", ["strach", "trvá několik dní.", "pocit nebezpečí", "opakuje se"], 1], # [cite: 1600]
-        ["Spontánní záchvaty paniky souvisí s:", ["věkem", "pubertální fází.", "kognicí", "řečí"], 1], # [cite: 1605]
-        ["Agorafobie je strach z:", ["opuštění domova", "odloučení", "záchvatu paniky, kde je únik těžký.", "pavouků"], 2], # [cite: 1610]
-        ["Záchvaty paniky se u dospívajících vyskytují u:", ["3-4 %", "8-10 %", "15-20 %", "25-30 %"], 0], # [cite: 1615]
-        ["Které děti mají nejnižší míru remise?", ["SAD", "GAD", "OCD", "panická porucha"], 3], # [cite: 1620]
-        ["Co NENÍ rysem PTSD?", ["prožívání traumatu", "podrážděnost a agitovanost.", "vyhýbání se", "vzrušení"], 1], # [cite: 1625]
-        ["Děti s akutní stresovou poruchou se oproti PTSD:", ["rychleji zotavují.", "mají slabší stresory", "mají problémy s chováním", "mají méně podpory"], 0], # [cite: 1630]
-        ["Nejméně pravděpodobná je deprese u:", ["sociální fobie", "specifické fobie.", "GAD", "SAD"], 1], # [cite: 1635]
-        ["Ve většině případů:", ["úzkost předchází depresi.", "deprese dříve", "současně", "není vztah"], 0], # [cite: 1640]
-        ["Oproti úzkostným mají depresivní děti:", ["více neg. afektivity", "méně neg. afektivity", "více poz. afektivity", "méně pozitivní afektivity."], 3], # [cite: 1645]
-        ["U žen jsou úzkosti vůči mužům:", ["dvakrát častěji.", "méně často", "mírně více", "stejně"], 0], # [cite: 1650]
-        ["Dětská psychopatologie odráží kombinaci skutečné/skutečného _______ dítěte a _______, skrze které se na něj dívají ostatní v kultuře dítěte.", ["symptomu, struktury", "poruchy, zaměření", "chování, perspektivy", "chování, behaviorální rámce"], 3], # [cite: 1655]
-        ["Dvoufaktorová teorie vysvětluje úzkost kombinací:", ["vazby a učení", "temperamentu a expozice", "klasického a operantního podmiňování.", "modelování"], 2], # [cite: 1660]
-        ["Plaché děti mají menší šanci na úzkost, pokud:", ["je rodiče chrání", "rodiče dají pevné hranice pro stres.", "mají sourozence", "rodiče je ignorují"], 1], # [cite: 1665]
-        ["Genetický podíl úzkosti s věkem:", ["klesá", "je větší u kluků", "stoupá a je větší u dívek.", "je stejný"], 2], # [cite: 1670]
-        ["Mozkový systém spojený s úzkostí je:", ["aktivační", "inhibiční.", "formační", "hypotalamický"], 1], # [cite: 1675]
-        ["Neurotransmiter nejčastěji v úzkostech je:", ["dopamin", "noradrenalin", "GABA.", "prominergní"], 2], # [cite: 1680]
-        ["Neurotoxické účinky může mít rané vystavení:", ["kortizolu.", "serotoninu", "GABA", "norepinefrinu"], 0], # [cite: 1685]
-        ["Úzkost souvisí s:", ["výchovou", "vazbou", "rodinou", "vším uvedeným"], 3], # [cite: 1690]
-        ["Rodičovský styl u úzkostí je nejčastěji:", ["neangažovaný", "příliš kontrolující.", "tolerantní", "pozitivní"], 1], # [cite: 1695]
-        ["Behaviorální terapie úzkosti používá:", ["kognici", "rodinu", "léky", "prezentaci obavného podnětu."], 3], # [cite: 1700]
-        ["Léčba fobie z jízdy autem zahrnuje:", ["hraní s autíčky", "sledování videí", "představy", "skutečnou jízdu."], 3], # [cite: 1705]
-        ["Nejúčinnější léčba většiny úzkostí je:", ["behaviorální", "kognitivně-behaviorální.", "rodinná", "léky"], 1], # [cite: 1710]
-        ["Nejsilnější důkazy léků u dětí jsou u:", ["GAD", "paniky", "OCD.", "sociální fobie"], 2] # [cite: 1715]
+            ["1. Která z následujících možností NEPLATÍ pro úzkostné poruchy?", ["U dospělých jsou sice časté, ale u dětí jsou relativně vzácné.", "Existuje několik různých typů úzkostných poruch.", "Úzkostné poruchy mohou přetrvávat po celý život.", "Úzkostné poruchy se často vyskytují společně s jinými poruchami."], 0],
+    ["2. _______ mobilizuje tělo k akci v situaci boj/útěk.", ["Centrální nervový systém", "Periferní nervový systém", "Sympatický nervový systém", "Parasympatickým nervovým systémem"], 2],
+    ["3. Při aktivaci sympatického nervového systému dochází k uvolnění _______ v nadledvinkách.", ["inzulínu", "adrenalinu", "růstového hormonu", "testosteronu"], 1],
+    ["4. _______ je/jsou okamžitá poplachová reakce na aktuální nebezpečí nebo ohrožení života.", ["Úzkost", "Panika", "Strach", "Obavy"], 2],
+    ["5. _______ se vyznačuje/vyznačují pocity strachu a nedostatku kontroly nad nadcházejícími událostmi.", ["Úzkost", "Panika", "Strach", "Obavy"], 0],
+    ["6. _______ je/jsou skupina tělesných příznaků reakce boj/útěk, které se nečekaně objevují bez zjevné hrozby nebo nebezpečí.", ["Úzkost", "Panika", "Strach", "Obavy"], 1],
+    ["7. Strach _______ se zvyšuje s věkem.", ["ze sociálních situací", "ze školy", "z tmy", "z odloučení od rodičů"], 0],
+    ["8. Strach ze smrti je běžný u dětí ve věku", ["1-2 let.", "3-5 let.", "6-8 let.", "9-12 let."], 3],
+    ["9. Strach z odloučení od rodičů je běžný u dětí ve věku", ["1-2 let.", "3-4 let.", "5-6 let.", "všechny tyto věkové skupiny"], 3],
+    ["10. Ve srovnání s dětmi bez úzkostných poruch mají děti s úzkostnými poruchami intenzivnější obavy z/ze", ["školních úloh.", "bolístek.", "dobrých výsledků ve sportu.", "pobytu v blízkosti cizích lidí."], 3],
+    ["11. Rituální chování je u malých dětí ______援.", ["nepřítomné", "neobvyklé", "běžné", "obtížně pozorovatelné"], 2],
+    ["12. Úzkostné poruchy jsou v MKN-10 rozděleny do kategorií, které odrážejí", ["primární dimenze úzkosti (biologické/kognitivní/behaviorální).", "druhy reakcí a vyhýbání se.", "odpověď na léčbu (dobrá/špatná).", "typický věk nástupu."], 1],
+    ["13. Kdy absence separační úzkosti naznačuje nejistou vazbu?", ["ve 2 měsících věku", "ve 12 měsících věku", "ve věku 10 let", "nikdy"], 1],
+    ["14. Nejčastější úzkostnou poruchou v dětství je", ["obsedantně-kompulzivní porucha.", "panická porucha.", "generalizovaná úzkostná porucha.", "separační úzkostná porucha."], 3],
+    ["15. Úzkostná porucha s nejčasnějším věkem nástupu je", ["obsedantně-kompulzivní porucha.", "panická porucha.", "generalizovaná úzkostná porucha.", "separační úzkostná porucha."], 3],
+    ["16. Průměrný věk nástupu separační úzkostné poruchy je", ["ve věku 2-3 let.", "ve věku 4-6 let.", "ve věku 7-8 let.", "ve věku 9-10 let."], 2],
+    ["17. Který z následujících případů NENÍ u dětí se separační úzkostnou poruchou běžný?", ["souběžný výskyt jiné úzkostné poruchy", "souběžný výskyt depresivní poruchy", "souběžný výskyt poruchy chování", "odmítání školní docházky"], 2],
+    ["18. Která z následujících možností vede nejméně pravděpodobně k odmítání školní docházky?", ["potíže s učením", "separační úzkostná porucha", "strach z posměchu nebo šikany", "strach z hodnocení okolím"], 0],
+    ["19. Která z následujících diagnóz NEPATŘÍ mezi diagnózy MKN-10?", ["separační úzkostná porucha", "obsedantně-kompulzivní porucha", "panická porucha", "testová úzkost"], 3],
+    ["20. Které z následujících tvrzení o testové úzkosti je NEPRAVDIVÉ?", ["Děti s testovou úzkostí se často obávají, že budou při testu negativně hodnoceny.", "Testová úzkost může občas odrážet specifickou fobii z testových situací.", "Testová úzkost je často komorbidní s generalizovanou úzkostnou poruchou.", "Všechny uvedené možnosti jsou pravdivé."], 3],
+    ["21. Přehnané obavy a napětí při absenci podmínek, které by normálně takovou reakci vyvolaly, se označují jako", ["očekávaná tenze.", "obavné očekávání.", "strach.", "panika."], 1],
+    ["22. Která z následujících možností odlišuje děti s generalizovanou úzkostnou poruchou od dětí s jinými úzkostnými poruchami?", ["jejich obavy jsou nepřiměřené věku", "vyskytují se u nich somatické příznaky", "dělají si starosti kvůli drobným událostem", "mají obavy z drobných událostí a pociťují somatické příznaky"], 2],
+    ["23. Aby byla u dítěte diagnostikována generalizovaná úzkostná porucha, musí se u něj projevovat", ["separační úzkostná porucha.", "obavy o studijní výsledky.", "alespoň jeden somatický příznak.", "perfekcionismus a sebekritické chování."], 2],
+    ["24. Prevalence generalizované úzkostné poruchy u dětí je", ["1-2 %", "2-4 %", "3-6 %", "6-8 %"], 2],
+    ["25. Na rozdíl od dospělých děti specifickými fobiemi", ["se vyhýbají obavným podnětům.", "nerozpoznají, že jejich obavy jsou extrémní a nepřiměřené.", "pociťují fyziologické vzrušení, když se setkají s obávanými podněty.", "jsou snadněji léčitelné."], 1],
+    ["26. Předpokládá se, že nejčastější specifickou fobií u dětí je strach ze zvířat způsobený", ["vysokou mírou vystavení zvířatům v raném dětství.", "evolučními procesy.", "nadměrnou ochranou rodičů při setkání malých dětí se zvířaty.", "všechny tyto faktory"], 1],
+    ["27. Příkladem situační specifické fobie je strach z", ["výšek.", "výtahů.", "nemocí.", "injekcí."], 1],
+    ["28. ______ je nejčastější sekundární diagnózou u dětí s jinou úzkostnou poruchou.", ["Specifická fobie", "Sociální fobie", "Obsedantně-kompulzivní porucha", "Generalizovaná úzkostná porucha"], 1],
+    ["29. Většina sociálních fobií se poprvé objevuje v", ["předškolním věku.", "mladší školním věku.", "prepubertě.", "pubertě a dospívání."], 3],
+    ["30. Selektivní mutismus je považován za typ", ["specifická fobie.", "generalizované úzkostné poruchy.", "obsedantně-kompulzivní poruchy.", "sociální fobie."], 3],
+    ["31. Děti, u nichž se projevuje selektivní mutismus, mohou také", ["být opožděné ve vývoji.", "mít poruchy řeči.", "mít poruchy sluchového vnímání.", "platí vše výše uvedené"], 3],
+    ["32. U dítěte, jehož posedlostí je čistota, je pravděpodobné, že bude doprovázeno nutkáním", ["mytí rukou.", "vyhýbat se prasklinám na chodníku.", "přemýšlet o špíně.", "opakovaně se dotýkat špinavých předmětů."], 0],
+    ["33. Nutkání počítat stále dokola do určitého čísla často souvisí s obavou z/ze", ["symetrie nebo řádu.", "poškození.", "kontaminace.", "náboženských otázek."], 1],
+    ["34. Jaký je účel kompulzí?", ["spotřebovat čas", "vyhnout se soustředění na jiné věci", "snížit úzkost", "nemá žádný záměr"], 2],
+    ["35. Míra výskytu obsedantně-kompulzivní poruchy u dětí je _______ míra/míře výskytu obsedantně-kompulzivní poruchy u dospělých.", ["menší než", "větší než", "je rovna", "více variabilní než"], 2],
+    ["36. _______ vlivy hrají větší roli u časných případů obsedantně-kompulzivní poruchy než v případech pozdního nástupu obsedantně-kompulzivní poruchy.", ["Rodičovské", "Skupinové", "Neurobiologické", "Genetické"], 3],
+    ["37. Která z následujících možností NENÍ charakteristická pro záchvat paniky?", ["intenzivní strach nebo nepříjemné pocity", "může trvat několik dní", "pocit bezprostředního nebezpečí", "vyskytují se několikrát týdně nebo měsíčně"], 1],
+    ["38. Výskyt spontánních záchvatů paniky souvisí s", ["chronologickým věkem.", "pubertální fází.", "kognitivním vývojovým stadiem.", "vývojem internalizované řeči."], 1],
+    ["39. Agorafobii lze nejlépe popsat jako strach z", ["opuštění domova.", "odloučení od rodičů.", "záchvatu paniky v situacích, kdy by únik byl obtížný nebo pomoc nedostupná.", "pavouků."], 2],
+    ["40. Záchvaty paniky se vyskytují přibližně u _______ dospívajících.", ["3-4 %", "8-10 %", "15-20 %", "25-30 %"], 2],
+    ["41. Děti a dospívající s/se _______ mají nejnižší míru remise ze všech úzkostných poruch.", ["separační úzkostnou poruchou", "generalizovanou úzkostnou poruchou", "obsedantně-kompulzivní poruchou", "panickou poruchou"], 3],
+    ["42. Která z následujících možností NENÍ základním rysem posttraumatické stresové poruchy?", ["přetrvávající opakované prožívání traumatické události", "přetrvávající podrážděnost a agitovanost", "přetrvávající vyhýbání se souvisejícím podnětům a otupení celkové reaktivity", "přetrvávající příznaky extrémního vzrušení"], 1],
+    ["43. Ve srovnání s dětmi s PTSD se děti s akutní stresovou poruchou", ["rychleji zotavují.", "zažívají méně závažné stresory.", "vykazují v pozdějším věku problémy s chováním.", "mají méně zdrojů podpory."], 0],
+    ["44. Nejméně pravděpodobná je diagnóza deprese u", ["sociální fobie.", "specifická fobie.", "generalizované úzkostné poruchy.", "separační úzkostné poruchy."], 1],
+    ["45. Ve většině případů", ["úzkost předchází depresi.", "deprese předchází úzkost.", "se deprese a úzkost vyskytují současně.", "není mezi úzkostí a depresí jasný vztah."], 0],
+    ["46. Ve srovnání s úzkostnými dětmi vykazují děti s depresí", ["více negativní afektivity.", "menší negativní afektivitu.", "více pozitivní afektivity.", "méně pozitivní afektivity."], 3],
+    ["47. U žen se příznaky úzkosti vyskytují _______ u mužů.", ["dvakrát častěji než", "s menší pravděpodobností než", "s mírně vyšší pravděpodobností než", "se stejnou pravděpodobností jako"], 0],
+    ["48. Dětská psychopatologie odráží kombinaci skutečné/skutečného _______ dítěte a _______, skrze které se na něj dívají ostatní v kultuře dítěte.", ["symptomu, struktury", "poruchy, zaměření", "chování, perspektivy", "chování, behaviorálního rámce"], 3],
+    ["49. Dvoufaktorová teorie vysvětluje, že úzkostné poruchy vznikají a přetrvávají v důsledku kombinace", ["teorie attachmentu a sociálního učení.", "temperamentu a expozice.", "klasického a operantního podmiňování.", "modelování a posilování."], 2],
+    ["50. Děti s plachým a zdrženlivým temperamentem mohou mít menší pravděpodobnost, že se u nich později vyvine úzkostná porucha, pokud", ["je rodiče chrání před stresujícími událostmi.", "jim rodiče stanoví pevné hranice, které je naučí, jak se vyrovnat se stresem.", "mají starší sourozence.", "rodiče ignorují jejich žádosti o útěchu a ochranu."], 1],
+    ["51. Výsledky studií úzkosti u dětí a dospívajících, které byly provedeny na dvojčatech a při adopcích, naznačují, že genetický podíl úzkosti", ["se s věkem snižuje a je větší u chlapců než u dívek.", "klesá s věkem a je větší u dívek než u chlapců.", "s věkem se zvyšuje a je větší u chlapců než u dívek.", "s věkem se zvyšuje a je větší u dívek než u chlapců."], 3],
+    ["52. Mozkový systém spojený s úzkostí se nazývá", ["behaviorální aktivační systém.", "behaviorální inhibiční systém.", "behaviorální formační systém.", "hypotalamický systém."], 1],
+    ["53. Neurotransmiterový systém, který se nejčastěji podílí na vzniku úzkostných poruch, je _______ systém.", ["dopaminergní", "nordopaminergní", "GABA-erginí", "prominergní"], 2],
+    ["54. Dlouhodobé vystavení ________ v důsledku raného stresu nebo traumatu může mít neurotoxické účinky na vyvíjející se mozek.", ["kortizolu", "serotoninu", "GABA", "norepinefrinu"], 0],
+    ["55. Úzkost je spojena s", ["výchovnými postupy.", "vazbou mezi rodičem a dítětem.", "fungováním rodiny.", "platí vše výše uvedené"], 3],
+    ["56. Rodičovský styl, který je nejčastěji spojován s úzkostnými poruchami u dětí, je takový, při kterém jsou rodiče", ["neangažovaní.", "příliš kontrolující.", "příliš tolerantní.", "příliš pozitivní."], 1],
+    ["57. Ve většině behaviorálních terapií zaměřených na snížení úzkosti a strachu dětí se používá/používají", ["kognitivní techniky.", "zapojení rodiny.", "podávání léků.", "prezentování obavného podnětu."], 3],
+    ["58. Nejúčinnější léčba fobie dítěte z jízdy v autě zahrnuje", ["hraní si s autíčky.", "sledování nahrávek jiných dětí, které jezdí v autě.", "představování si jízdy v autě.", "skutečnou jízdu v autě."], 3],
+    ["59. Nejúčinnějším postupem při léčbě většiny úzkostných poruch je", ["behaviorální terapie.", "kognitivně-behaviorální terapie.", "rodinná terapie.", "užívání léků."], 1],
+    ["60. Dosud nejsilnější důkazy o účinnosti medikace při léčbě úzkostných poruch u dětí a dospívajících se týkají", ["generalizované úzkostné poruchy.", "panické poruchy.", "obsedantně-kompulzivní poruchy.", "sociální fobie."], 2]
     ],
         "AUTISMUS": [
-            ["Leo Kanner považoval za rysy autismu:", ["absenci řeči", "monotónnost", "stereotypy", "absenci sociálních interakcí."], 3], # [cite: 1721]
-        ["Rané teorie připisovaly autismus:", ["biologii", "smyslům", "přání rodičů, aby se dítě nenarodilo.", "prostředí"], 2], # [cite: 1726]
-        ["Pro diagnózu MKN-10 musí být příznaky patrné před věkem:", ["1 rok", "3 let.", "5 let", "7 let"], 1], # [cite: 1731]
-        ["Které tvrzení o autismu je pravdivé?", ["vývojová porucha", "patří do PAS", "závažná porucha", "všechna uvedená."], 3], # [cite: 1736]
-        ["Které tvrzení o sociálních dovednostech dětí s PAS je pravdivé?", ["potíže i při průměrné/nadprůměrné inteligenci.", "potíže jen u podprůměru", "potíže jen s MR", "potíže jen bez řeči"], 0], # [cite: 1741]
-        ["Děti s _______ mají potíže s rozpoznáváním výrazů obličeje:", ["depresí", "autismem.", "ADHD", "úzkostí"], 1], # [cite: 1746]
-        ["Sdílená sociální pozornost je schopnost:", ["mluvit se dvěma", "koordinovat pozornost na osobu a objekt.", "dvě témata", "sledovat cizí rozhovor"], 1], # [cite: 1751]
-        ["Většina dětí s autismem:", ["nemá vazbu k rodičům", "náhodné vazby", "vztah jen s rodiči", "preferuje pečovatele před cizími."], 3], # [cite: 1756]
-        ["O emocích u dětí s PAS nevíme, zda je odlišně:", ["prožívají", "zpracovávají", "vyjadřují", "vše uvedené."], 0], # [cite: 1761]
-        ["Protodeklarativní gesta vyžadují:", ["řeč", "teorii mysli + řeč", "teorii mysli + sdílenou pozornost.", "inteligenci"], 2], # [cite: 1766]
-        ["U kolika dětí s PAS se nevyvíjí funkční jazyk?", ["všech", "většiny", "přibližně poloviny.", "malého počtu"], 2], # [cite: 1771]
-        ["Děti s PAS nejčastěji používají:", ["instrumentální gesta.", "expresivní", "protodeklarativní", "sdílené"], 0], # [cite: 1776]
-        ["Echolálie jsou pravděpodobně:", ["patologie", "OCD", "krok v osvojování jazyka.", "návyk"], 2], # [cite: 1781]
-        ["Primární jazykový deficit u PAS se týká:", ["gramatiky", "sémantiky", "morfologie", "pragmatiky."], 3], # [cite: 1786]
-        ["Inteligenční testy (WISC) mohou PAS děti:", ["podhodnocovat.", "nadhodnocovat", "dávat stereotyp", "odrážet přesně"], 0], # [cite: 1791]
-        ["Autostimulace může být způsobena:", ["touhou po stimulaci", "příliš podnětným prostředím", "posílením", "vším uvedeným."], 3], # [cite: 1796]
-        ["Schopnosti přesahující běžný intelekt se nazývají:", ["savantské.", "ostrůvkovité", "makroschopnosti", "nadpřirozené"], 1], # [cite: 1801]
-        ["Zaměření jen na jeden rys objektu je stimulová:", ["dominance", "specializace", "screening", "nadselektivita."], 3], # [cite: 1806]
-        ["Upřednostňování vjemů před jinými je senzorická:", ["dominance.", "specializace", "screening", "nadselektivita"], 0], # [cite: 1811]
-        ["Teorie mysli předpokládá, že děti s PAS:", ["ignorují rysy", "nerozumí duševním stavům druhých.", "detailismus", "nedělí pozornost"], 1], # [cite: 1816]
-        ["Osoba bez centrální koherence:", ["vnímá po částech, ne celek.", "nerozumí stavům", "nekoordinuje tělo", "nechápe hierarchii"], 0], # [cite: 1821]
-        ["Ve WISC by PAS dělalo nejvíc potíží:", ["opakování čísel", "kostky", "porozumění.", "vše stejné"], 2], # [cite: 1826]
-        ["Děti s PAS trpí problémy s:", ["spánkem", "gastrointestinem", "stravou", "vším uvedeným."], 3], # [cite: 1831]
-        ["Nejcharakterističtější kognitivní deficit u PAS je:", ["centrální koherence", "exekutivní funkce", "nedostatečná teorie mysli.", "nadselektivita"], 2], # [cite: 1836]
-        ["Děti s PAS mají často současně:", ["MR a epilepsii.", "nadprůměrné IQ", "schizofrenii", "MR a schizofrenii"], 0], # [cite: 1841]
-        ["Nástup epilepsie u PAS je nejspíše v:", ["kojeneckém věku", "škole", "adolescenci.", "dospělosti"], 2], # [cite: 1846]
-        ["Co odlišuje některé PAS děti od MR?", ["uši", "zvětšený obvod hlavy.", "nos", "oči"], 1], # [cite: 1851]
-        ["Dítě s MR (bez PAS) má oproti PAS spíše:", ["sebepoškozování", "oční kontakt a úsměv.", "stereotypy", "autostimulaci"], 1], # [cite: 1856]
-        ["Děti s jazykovou poruchou mají proti PAS méně potíží v:", ["osvojování jazyka", "délce hovoru", "sociální konverzaci.", "gramatice"], 2], # [cite: 1861]
-        ["Nejnovější prevalence PAS je asi:", ["1 z 1000", "1 z 500", "1 z 250", "1 ze 150."], 3], # [cite: 1866]
-        ["Nárůst prevalence PAS je způsoben:", ["kritérii", "rozpoznáváním mírných forem", "screeningem", "vším uvedeným."], 3], # [cite: 1871]
-        ["Genderové rozdíly u PAS:", ["stejně", "častější u chlapců", "chlapci (u těžké MR vyrovnanější).", "chlapci (u vysokého IQ podobný)"], 2], # [cite: 1876]
-        ["Extrémní mužský mozek předpokládal, že PAS mozky jsou více:", ["systematizující.", "méně systematizující", "ženy jsou více syst.", "muži empatičtí"], 0], # [cite: 1881]
-        ["Deficity PAS se projevují kolem:", ["narození", "6 měsíců", "2. roku.", "školy"], 2], # [cite: 1886]
-        ["Dva prediktory úspěchu dospělých s PAS jsou:", ["stereotypy", "IQ a jazyk.", "rodiče a intervence", "motorika"], 1], # [cite: 1891]
-        ["AAP doporučuje screening PAS ve věku:", ["12 m", "15 m", "12 a 24 m", "18 a 24 měsíců."], 3], # [cite: 1896]
-        ["S PAS je nejčastěji spojena:", ["tuberózní skleróza.", "Down", "PKU", "fragilní X"], 0], # [cite: 1901]
-        ["Příbuzní dětí s PAS mají vyšší výskyt:", ["echolálií", "MR", "pragmatických jazykových obtíží.", "všeho uvedeného"], 2], # [cite: 1906]
-        ["Kolik % rodičů věří, že PAS způsobilo očkování?", ["10 %", "25 %.", "50 %", "75 %"], 2], # [cite: 1911]
-        ["Nejčastější neurotransmiter v PAS je:", ["serotonin.", "dopamin", "noradrenalin", "GABA"], 0], # [cite: 1916]
-        ["Dr. Lovaas vyvinul:", ["TEACCH", "Floor Time", "ABA.", "PRT"], 2], # [cite: 1921]
-        ["Metoda vyžadování specifických odpovědí je trénink:", ["jemných pokusů", "odpovědí", "podnět-reakce", "diskrétních pokusů."], 3], # [cite: 1926]
-        ["Posilování chování přes přirozené příležitosti je trénink:", ["naturalistický", "diskrétní", "náhodný", "klíčových reakcí."], 2], # [cite: 1931]
-        ["Včasná intervence u PAS těží z:", ["rodičů", "absence chování", "ochoty se zavděčit", "plasticity."], 3], # [cite: 1936]
-        ["UCLA Young Autism Project používá:", ["napodobování", "odměňování a tvarování.", "mimodomovní prostředí", "šoky"], 1], # [cite: 1941]
-        ["Děti s Aspergerem na rozdíl od PAS:", ["nemají sociální postižení", "nemají omezené zájmy", "mají zájem o interakci", "menší zpoždění v řeči."], 2], # [cite: 1946]
-        ["Co NENÍ pravda o Rettově syndromu?", ["dívky", "normální vývoj do 6-12 m", "růst hlavy", "nemají poruchy řeči."], 3], # [cite: 1951]
-        ["25 % dětí s _______ možná nikdy nezačne chodit:", ["PAS", "Aspergerem", "Rettovým syndromem.", "dezintegrační poruchou"], 2], # [cite: 1956]
-        ["Lukáš ztratil dovednosti po normálním vývoji:", ["PAS", "Asperger", "dětská dezintegrační porucha.", "Rett"], 2] # [cite: 1961]
-    ],
+            ["1. Leo Kanner považoval za základní rysy raného dětského autismu", ["absenci řeči.", "potřebu monotónnosti.", "stereotypní chování.", "absenci sociálních interakcí."], 3],
+    ["2. Rané teorie autismu připisovaly chování autistického dítěte", ["biologickým abnormalitám mozku.", "neschopnosti integrovat smyslové podněty.", "přání rodičů, aby se dítě bylo bývalo nenarodilo.", "chybění podnětného prostředí."], 2],
+    ["3. Pro stanovení diagnózy autismu podle MKN-10 musí být první příznaky patrné před dosažením věku", ["1 roku.", "3 let.", "5 let.", "7 let."], 1],
+    ["4. Které z následujících tvrzení o autismu je pravdivé?", ["Autismus je vývojová porucha.", "Autismus patří mezi poruchy autistického spektra.", "Autismus je závažná porucha.", "Všechna uvedená tvrzení jsou pravdivá."], 3],
+    ["5. Které z následujících tvrzení o sociálních dovednostech dětí s autismem je pravdivé?", ["Děti s autismem mají výrazné potíže ve vztazích s ostatními, i když mají průměrnou či nadprůměrnou inteligenci.", "Děti s autismem mají potíže ve vztazích pouze tehdy, pokud mají podprůměrnou inteligenci.", "Děti s autismem mají potíže ve vztazích jen tehdy, pokud mají zároveň mentální retardaci.", "Děti s autismem mají potíže ve vztazích pouze v případě podprůměrné inteligence a absence funkční řeči."], 0],
+    ["6. Děti, u nichž byl/a/o diagnostikován/a/o _______ mají potíže s rozpoznáváním výrazů v obličeji.", ["deprese", "autismus", "ADHD", "úzkostná porucha"], 1],
+    ["7. Sdílená sociální pozornost označuje schopnost", ["komunikovat se dvěma lidmi současně.", "koordinovat zaměření pozornosti na jinou osobu a na objekt společného zájmu.", "vést rozhovor na dvě různá témata.", "věnovat pozornost rozhovoru, který vedou dva jiní lidé."], 1],
+    ["8. Pokud jde o navazování vztahů, většina dětí s autismem", ["si nevytváří smysluplné sociální vazby k rodičům.", "si vytváří nahodilé vazby k jakémukoli dospělému.", "si nevytváří vztah s žádným člověkem kromě rodičů.", "preferuje své pečovatele před neznámými dospělými."], 3],
+    ["9. O emočním životě dětí s autismem nevíme, zda emoce _______ odlišně.", ["prožívají", "zpracovávají", "vyjadřují", "platí všechny výše uvedené možnosti"], 0],
+    ["10. Používání protodeklarativních gest vyžaduje", ["verbální schopnosti a sdílenou sociální pozornost.", "teorii mysli a verbální schopnosti.", "teorii mysli a sdílenou sociální pozornost.", "inteligenci a sdílenou sociální pozornost."], 2],
+    ["11. U _______ dětí s autismem se nerozvíjí žádný funkční jazyk.", ["všech", "většiny", "přibližně poloviny", "malého počtu"], 2],
+    ["12. Děti s autismem nejčastěji používají", ["instrumentální gesta.", "expresivní gesta.", "protodeklarativní gesta.", "sdílené sociální chování."], 0],
+    ["13. Předpokládá se, že echolálie u dětí s autismem jsou", ["znakem patologie.", "projevem souběžné obsedantně-kompulzivní poruchy.", "důležitým krokem v osvojování jazyka.", "nekontrolovatelným návykem."], 2],
+    ["14. Primární jazykový deficit u dětí s autismem (které si jazyk postupně osvojují) se týká především", ["používání gramatiky.", "sémantiky.", "používání morfologie.", "pragmatiky."], 3],
+    ["15. Tradiční inteligenční testy, jako například WISC, mohou _______ intelektuální fungování dětí s autismem.", ["podhodnocovat", "uměle nadhodnocovat", "podávat stereotypní obraz", "přesně odrážet"], 0],
+    ["16. Autostimulační chování u dětí s autismem může být způsobeno tím, že", ["touží po stimulaci, a autostimulace slouží k dráždění jejich nervového systému.", "prostředí je pro ně příliš podnětné, a autostimulace pomáhá blokovat či regulovat nežádoucí vjemy.", "bývá často doprovázeno nějakým druhem posílení.", "platí kterákoli z uvedených možností"], 3],
+    ["17. Speciální kognitivní schopnosti, které výrazně přesahují běžnou úroveň intelektu dítěte s autismem i průměr běžné populace, se označují jako", ["savantské schopnosti", "ostrůvkovité schopnosti", "makroschopnosti", "nadpřirozené schopnosti"], 1],
+    ["18. Tendence zaměřovat se pouze na jeden rys objektu v prostředí a ignorovat přitom další stejně významné vlastnosti se nazývá stimulová/stimulový", ["dominance.", "specializace.", "screening.", "nadselektivita."], 3],
+    ["19. Upřednostňování určitých typů smyslových vjemů před jinými se označuje jako senzorická/senzorický", ["dominance.", "specializace.", "screening.", "nadselektivita."], 0],
+    ["20. Hypotéza teorie mysli u autismu předpokládá, že děti s autismem", ["se soustředí pouze na jeden rys objektu v prostředí, zatímco ignorují další stejně důležité znaky.", "nerozumí duševním stavům druhých.", "nejsou schopné vytvořit si celkový obraz kvůli tendenci soustředit se na detail.", "nejsou schopné rozdělit svou sociální pozornost v sociálních situacích."], 1],
+    ["21. Osoba postrádající centrální koherenci", ["zpracovává informace po částech a po kouscích, nedokáže však nevnímat celek.", "nerozumí duševním stavům ostatních.", "nedokáže koordinovat pohyby pravé a levé poloviny těla.", "nechápe společenskou hierarchie."], 0],
+    ["22. Pokud byste administrovali test WISC dítěti s autismem, která z následujících podškál by s největší pravděpodobností způsobila dítěti nejvíce obtíží?", ["Opakování čísel", "Kostky", "Porozumění", "Všechny uvedené podškály by byly pro dítě přibližně stejně náročné"], 2],
+    ["23. Děti s autismem často trpí problémy spojenými s", ["vzorcem spánek-bdění.", "gastrointestinálními obtížemi.", "vybíravostí ve stravování.", "všemi výše uvedenými obtížemi"], 3],
+    ["24. Nejcharakterističtějším kognitivním deficitem u dětí s autismem je", ["oslabená centrální koherence.", "deficity exekutivních funkcí.", "nedostatečná teorie mysli.", "senzorická nadselektivita."], 2],
+    ["25. Mnoho dětí s autismem má současně", ["mentální retardaci a epilepsii.", "nadprůměrnou inteligenci.", "schizofrenii.", "mentální retardaci a schizofrenii."], 0],
+    ["26. Nejpravděpodobnějším obdobím nástupu epilepsie u dětí s autismem je", ["kojenecký věk.", "mladší školní věk.", "adolescence.", "dospělost."], 2],
+    ["27. _______ u některých dětí s autismem je odlišuje/odlišují od dětí s mentální retardací či poruchou řeči.", ["Nízko posazené uši", "Abnormálně zvětšený obvod hlavy", "Zploštělý kořen nosu", "Široce posazené oči"], 1],
+    ["28. Dítě s mentální retardací, ale bez autismu, má vyšší pravděpodobnost projevu _______ než dítě s autismem.", ["sebepoškozujícího chování", "očního kontaktu a úsměvu", "stereotypního motorického chování", "autostimulačního chování"], 1],
+    ["29. Děti s vývojovými jazykovými poruchami mají menší pravděpodobnost obtíží v oblasti _______ ve srovnání s dětmi s autismem.", ["osvojování jazyka", "délky hovoru", "spontánní sociální konverzace", "gramatické složitosti"], 2],
+    ["30. Nejnovější odhady prevalence autismu udávají výskyt přibližně", ["1 dítě z 1 000.", "1 dítě z 500.", "1 dítě z 250.", "1 dítě ze 150."], 3],
+    ["31. Nárůst prevalence autismu je s největší pravděpodobností způsoben", ["rozšířením diagnostických kritérií.", "lepším rozpoznáváním mírnějších forem autismu.", "zvýšeným povědomím a screeningem v raném věku.", "všemi výše uvedenými faktory"], 3],
+    ["32. Které z následujících tvrzení o genderových rozdílech v rámci autismu je pravdivé?", ["Autismus se vyskytuje stejně často u chlapců i dívek.", "Autismus je častější u chlapců.", "Autismus je častější u chlapců, s výjimkou jedinců s těžkou mentální retardací, kde je poměr pohlaví vyrovnanější.", "Autismus je častější u chlapců, s výjimkou osob s průměrným nebo nadprůměrným IQ, kde je poměr chlapců a dívek podobný."], 2],
+    ["33. Dnes již obsoletní „Teorie extrémního mužského mozku“ snažící se vysvětlit autismus předpokládala, že", ["mozky osob s autismem jsou více „systematizující“.", "mozky osob s autismem jsou méně „systematizující“.", "ženy jsou více systematické.", "muži jsou více empatičtí."], 0],
+    ["34. Deficity zapříčiněné autismem se s rostoucí mírou projevují", ["již od narození.", "přibližně od 6 měsíců věku.", "kolem 2. roku života.", "při nástupu dítěte do školy."], 2],
+    ["35. Dva nejvýznamnější prediktory úspěšnosti v dospělosti u dětí s autismem jsou", ["absence stereotypního chování a teorie mysli.", "úroveň IQ a rozvoj jazyka.", "citlivý přístup rodičů a včasná intervence.", "intaktní motorické dovednosti a senzorická specializace."], 1],
+    ["36. Americká pediatrická akademie (AAP) doporučuje, že dítě by mělo podstoupit screening na autismus ve věku _______.", ["12 měsíců", "15 měsíců", "12 a 24 měsíců", "18 a 24 měsíců"], 3],
+    ["37. Ze všech onemocnění je s autismem nejčastěji spojován/a _______.", ["Tuberózní skleróza", "Downův syndrom", "Fenylketonurie (PKU)", "Syndrom fragilního X"], 0],
+    ["38. Příbuzní dětí s autismem vykazují zvýšený výskyt", ["echolálií.", "mentální retardace.", "pragmatických jazykových obtíží.", "všech výše uvedených"], 2],
+    ["39. Přibližně _______ procent rodičů dětí s autismem věří, že MMR vakcíny, rtuť (thimerosal) ve vakcínách a/nebo zvýšený počet očkování v dětství měly za následek vznik autismu u jejich dítěte.", ["deset", "dvacet pět", "padesát", "sedmdesát pět"], 2],
+    ["40. Nejčastěji spojovaný neurotransmiter s autismem je", ["serotonin.", "dopamin.", "noradrenalin.", "GABA."], 0],
+    ["41. Dr. Ivar Lovaas je nejvíce známý díky své práci na vývoji", ["programu TEACCH.", "metody Floor Time.", "aplikované behaviorální analýzy (ABA).", "terapie zaměřené na klíčové reakce (PRT)."], 2],
+    ["42. Metoda postupného předkládání podnětů (stimulů) a vyžadování specifických odpovědi používaná při terapii autismu se nazývá", ["trénink jemných pokusů.", "trénink odpovědí.", "metoda podnět–reakce.", "trénink diskrétních pokusů."], 3],
+    ["43. _______ posiluje chování pomocí přirozeně se vyskytujících příležitostí.", ["Naturalistický trénink", "Trénink diskrétních pokusů", "Náhodný trénink", "Trénink klíčových reakcí"], 2],
+    ["44. Účinnost včasné intervence u autismu vychází především z", ["pravděpodobnosti, rodiče ještě nebyli odrazeni.", "pravděpodobnosti, že se ještě nevyvinulo obtěžující a rušivé chování.", "ochoty malých dětí zavděčit se dospělým.", "plasticity nervového systému v raném dětství."], 3],
+    ["45. Projekt UCLA Young Autism Project se snaží zmírnit příznaky autismu prostřednictvím", ["napodobování dětí, jakmile začnou produkovat perseverativním chování.", "využívání technik modifikace chování, jako je odměňování a tvarování.", "umístění dětí do strukturovaného prostředí mimo domov.", "používání elektrických šoků."], 1],
+    ["46. Na rozdíl od dětí s autismem děti s Aspergerovým syndromem", ["nevykazují postižení v sociální oblasti.", "nevykazují omezené zájmy.", "projevují větší zájem o sociální interakce.", "vykazují menší opoždění ve vývoji jazyka."], 2],
+    ["47. Které z následujících tvrzení o Rettově syndromu je NEPRAVDIVÉ?", ["Rettův syndrom je obecně považován za poruchu postihující dívky.", "Děti s Rettovým syndromem obvykle procházejí obdobím normálního prenatálního a raného postnatálního vývoje během prvních 6 až 12 měsíců života.", "Děti s Rettovým syndromem vykazují zpomalený růst obvodu hlavy.", "Ve srovnání s dětmi s autismem nevykazují děti s Rettovým syndromem poruchy řeči."], 3],
+    ["48. Dvacet pět procent dětí s _______ možná nikdy nezačne chodit a přibližně polovina z těch, které chůzi zvládnou, tuto schopnost později ztratí.", ["autismem", "Aspergerovým syndromem", "Rettovým syndromem", "dětskou dezintegrační poruchou"], 2],
+    ["49. Čtyřletý Lukáš vykazuje výraznou ztrátu dříve osvojených dovedností po období zdánlivě normálního vývoje. Lukášovi bude s největší pravděpodobností diagnostikován/a", ["porucha autistického spektra.", "Aspergerův syndrom.", "dětská dezintegrační porucha.", "Rettův syndrom."], 2]
+],
         "PPP a ANOREXIE": [
             ["1. Přestože mají podobné obavy z jídla a přibírání na váze, jedinci s bulimií se liší od jedinců s anorexií v tom, že _______, zatímco jedinci s anorexií ne.", ["se přejídají a následně se zbavují jídla", "se pohybují v rozmezí 10 % své normální hmotnosti", "užívají projímadla", "jsou tajnůstkářští ohledně své poruchy"], 1], # [cite: 1967]
         ["2. Poruchy příjmu potravy jsou _______ nejčastějším onemocněním u dospívajících dívek.", ["druhým", "třetím", "pátým", "desátým"], 1], # [cite: 1972]
@@ -271,6 +271,7 @@ for i, opt in enumerate(options):
 
 st.divider()
 st.write(f"**Tvé skóre: {st.session_state.score} / {st.session_state.total}**")
+
 
 
 
